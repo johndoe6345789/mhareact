@@ -1,0 +1,3257 @@
+{
+  "app": {
+    "title": "UK Mental Health System",
+    "subtitle": "Reference Guide · Mental Health Act 1983",
+    "disclaimer": "This reference guide is for information and educational purposes only. It does not constitute legal advice. For advice specific to your situation, contact a specialist mental health law solicitor or your Independent Mental Health Advocate (IMHA). Legal aid is available for Mental Health Tribunal representation.",
+    "legislationLinks": [
+      {
+        "label": "Mental Health Act 1983",
+        "url": "https://www.legislation.gov.uk/ukpga/1983/20"
+      },
+      {
+        "label": "Mental Capacity Act 2005",
+        "url": "https://www.legislation.gov.uk/ukpga/2005/9"
+      }
+    ]
+  },
+  "theme": {
+    "palette": {
+      "primary": {
+        "main": "#003087",
+        "light": "#005EB8",
+        "dark": "#002060",
+        "contrastText": "#ffffff"
+      },
+      "secondary": {
+        "main": "#005EB8",
+        "light": "#0072CE",
+        "dark": "#003087",
+        "contrastText": "#ffffff"
+      },
+      "error": {
+        "main": "#DA291C",
+        "light": "#FF4D4D",
+        "dark": "#B00020"
+      },
+      "warning": {
+        "main": "#FFB81C",
+        "light": "#FFD54F",
+        "dark": "#F57C00"
+      },
+      "success": {
+        "main": "#009639",
+        "light": "#43C464",
+        "dark": "#006B29"
+      },
+      "info": {
+        "main": "#41B6E6",
+        "light": "#80D8FF",
+        "dark": "#0086C3"
+      },
+      "background": {
+        "default": "#F0F4F9",
+        "paper": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#212B36",
+        "secondary": "#637381"
+      }
+    },
+    "shape": {
+      "borderRadius": 10
+    },
+    "typography": {
+      "fontFamily": "'Inter', 'Helvetica Neue', Arial, sans-serif",
+      "h1": {
+        "fontWeight": 700
+      },
+      "h2": {
+        "fontWeight": 700
+      },
+      "h3": {
+        "fontWeight": 600
+      },
+      "h4": {
+        "fontWeight": 600
+      },
+      "subtitle1": {
+        "fontWeight": 500
+      },
+      "button": {
+        "textTransform": "none",
+        "fontWeight": 600
+      }
+    },
+    "darkPalette": {
+      "primary": {
+        "main": "#5C9CE6",
+        "light": "#82B0F0",
+        "dark": "#2C6FBF",
+        "contrastText": "#ffffff"
+      },
+      "secondary": {
+        "main": "#4CAEE8",
+        "light": "#7BC5EF",
+        "dark": "#2090C0",
+        "contrastText": "#ffffff"
+      },
+      "error": {
+        "main": "#FF6B6B",
+        "light": "#FF9B9B",
+        "dark": "#CC4444"
+      },
+      "warning": {
+        "main": "#FFD166",
+        "light": "#FFE0A0",
+        "dark": "#CC9900"
+      },
+      "success": {
+        "main": "#06D6A0",
+        "light": "#4DFFCE",
+        "dark": "#00A87B"
+      },
+      "info": {
+        "main": "#74C0E8",
+        "light": "#A0D8F0",
+        "dark": "#4090C0"
+      },
+      "background": {
+        "default": "#0D1117",
+        "paper": "#161B22"
+      },
+      "text": {
+        "primary": "#E6EDF3",
+        "secondary": "#8B949E"
+      },
+      "divider": "#30363D"
+    },
+    "components": {
+      "MuiCard": {
+        "defaultProps": {
+          "elevation": 0
+        },
+        "styleOverrides": {
+          "root": {
+            "border": "1px solid #E5EAF0"
+          }
+        }
+      },
+      "MuiPaper": {
+        "defaultProps": {
+          "elevation": 0
+        },
+        "styleOverrides": {
+          "root": {
+            "border": "1px solid #E5EAF0"
+          }
+        }
+      },
+      "MuiChip": {
+        "styleOverrides": {
+          "root": {
+            "fontWeight": 600
+          }
+        }
+      },
+      "MuiTab": {
+        "styleOverrides": {
+          "root": {
+            "textTransform": "none",
+            "fontWeight": 600,
+            "fontSize": "0.875rem"
+          }
+        }
+      },
+      "MuiButton": {
+        "styleOverrides": {
+          "root": {
+            "textTransform": "none",
+            "borderRadius": 8
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "id": "overview",
+        "label": "Overview",
+        "iconName": "HomeOutlined",
+        "tagline": "Start here",
+        "component": "Overview",
+        "path": "/"
+      },
+      {
+        "id": "orgchart",
+        "label": "Hospital Structure",
+        "iconName": "AccountTreeOutlined",
+        "tagline": "Who does what",
+        "component": "OrgChart",
+        "path": "/orgchart"
+      },
+      {
+        "id": "documents",
+        "label": "Document Library",
+        "iconName": "LibraryBooksOutlined",
+        "tagline": "153+ document types",
+        "component": "DocumentBrowser",
+        "path": "/documents"
+      },
+      {
+        "id": "mhasections",
+        "label": "MHA Sections",
+        "iconName": "GavelOutlined",
+        "tagline": "Legal powers explained",
+        "component": "MHASections",
+        "path": "/mhasections"
+      },
+      {
+        "id": "letter",
+        "label": "Letter Generator",
+        "iconName": "MailOutlined",
+        "tagline": "Build s.23 notice",
+        "component": "LetterGenerator",
+        "path": "/letter"
+      },
+      {
+        "id": "rights",
+        "label": "Your Rights",
+        "iconName": "ShieldOutlined",
+        "tagline": "Know your rights",
+        "component": "RightsGuide",
+        "path": "/rights"
+      },
+      {
+        "id": "discharge",
+        "label": "Getting Out",
+        "iconName": "ExitToAppOutlined",
+        "tagline": "Discharge routes & strategy",
+        "component": "DischargePathways",
+        "path": "/discharge"
+      }
+    ]
+  },
+  "overview": {
+    "hero": {
+      "label": "UK Mental Health System — Reference Guide",
+      "title": "Understanding the Mental Health Act 1983",
+      "description": "A comprehensive, JSON-powered reference covering the UK mental health inpatient system — from the hospital hierarchy and legal powers to patient rights and document types. Designed to help patients, families, and advocates navigate the system.",
+      "primaryAction": {
+        "label": "Build s.23 Discharge Letter",
+        "tab": "letter",
+        "iconName": "MailOutlined"
+      },
+      "secondaryAction": {
+        "label": "Know Your Rights",
+        "tab": "rights",
+        "iconName": "ShieldOutlined"
+      }
+    },
+    "alert": {
+      "severity": "warning",
+      "title": "If you are currently detained under Section 3",
+      "points": [
+        "You are entitled to a FREE Independent Mental Health Advocate (IMHA) — ask ward staff immediately.",
+        "Your nearest relative can write to the Hospital Managers ordering discharge under s.23 — see the Letter Generator tab.",
+        "You can apply to the Mental Health Tribunal — an independent judicial body that can order your release.",
+        "On discharge from s.3 you are entitled to free aftercare (s.117) — the local authority cannot charge you."
+      ]
+    },
+    "cards": [
+      {
+        "tab": "orgchart",
+        "iconName": "AccountTreeOutlined",
+        "title": "Hospital Structure",
+        "description": "Understand the hierarchy — from NHS Trust Board down to ward HCAs. See which roles are critical to a s.3 detention.",
+        "statKey": "orgChartRoles",
+        "muiColor": "primary"
+      },
+      {
+        "tab": "documents",
+        "iconName": "LibraryBooksOutlined",
+        "title": "Document Library",
+        "description": "Every A4 document type in a UK mental health hospital — statutory MHA forms, risk assessments, care plans, nursing records, and more.",
+        "statKey": "totalDocuments",
+        "muiColor": "secondary"
+      },
+      {
+        "tab": "mhasections",
+        "iconName": "GavelOutlined",
+        "title": "MHA Sections Reference",
+        "description": "Plain-English explanations of key MHA 1983 sections — detention powers, discharge routes, rights safeguards, police powers, and community provisions.",
+        "statKey": "totalMHASections",
+        "muiColor": "error"
+      },
+      {
+        "tab": "letter",
+        "iconName": "MailOutlined",
+        "title": "Letter Generator",
+        "description": "Build a Section 23 nearest relative discharge notice. Fill in the fields and get a print-ready letter with the correct legal wording.",
+        "statLabel": "Live preview",
+        "muiColor": "success"
+      },
+      {
+        "tab": "rights",
+        "iconName": "ShieldOutlined",
+        "title": "Your Rights",
+        "description": "Know your rights under the MHA 1983, Mental Capacity Act 2005, and NHS complaints law — IMHA, Tribunal, s.117 aftercare, and s.132 information rights.",
+        "statKey": "totalRights",
+        "muiColor": "warning"
+      },
+      {
+        "tab": "discharge",
+        "title": "Getting Out",
+        "description": "Step-by-step discharge strategies for every route — Tribunal, Managers hearing, Nearest Relative notice, clinical discharge — plus tailored advice for your specific circumstances.",
+        "iconName": "ExitToAppOutlined",
+        "muiColor": "error",
+        "statLabel": "6 discharge routes"
+      }
+    ]
+  },
+  "ui": {
+    "features": {
+      "globalSearch": true,
+      "darkMode": true,
+      "scrollToTop": true,
+      "shareButton": true,
+      "expandCollapseAll": true
+    },
+    "search": {
+      "placeholder": "Search everything... try \"discharge\", \"IMHA\", \"s.23\"",
+      "shortcut": "⌘K",
+      "maxResultsPerCategory": 5,
+      "categories": [
+        "document",
+        "section",
+        "right",
+        "role"
+      ]
+    }
+  },
+  "translations": {
+    "en": {
+      "app.title": "UK Mental Health System",
+      "app.subtitle": "Reference Guide · Mental Health Act 1983",
+      "app.badge": "MHA 1983",
+      "nav.overview": "Overview",
+      "nav.orgchart": "Hospital Structure",
+      "nav.documents": "Document Library",
+      "nav.mhasections": "MHA Sections",
+      "nav.letter": "Letter Generator",
+      "nav.rights": "Your Rights",
+      "section.orgchart.title": "Hospital Organisation Chart",
+      "section.orgchart.subtitle": "Who does what in a typical NHS mental health trust. Click ▶ to expand, ℹ to see why a role matters.",
+      "section.orgchart.rolesLabel": "roles",
+      "section.orgchart.keyLabel": "key roles",
+      "section.documents.title": "Document Library",
+      "section.documents.subtitle": "Every type of A4 document in a UK mental health inpatient setting — statutory MHA forms, clinical records, risk assessments, and more.",
+      "section.documents.searchPlaceholder": "Search documents... e.g. \"discharge\", \"tribunal\", \"consent\"",
+      "section.documents.allCategories": "All",
+      "section.mhasections.title": "MHA Sections Reference",
+      "section.mhasections.subtitle": "Plain-English reference for key sections of the Mental Health Act 1983. Sections highlighted in blue are relevant to a s.3 detention.",
+      "section.letter.title": "Letter Generator",
+      "section.letter.subtitle": "Build a Section 23 nearest relative discharge notice. Fill in the fields — the letter updates live on the right.",
+      "section.letter.requiredNote": "required",
+      "section.letter.optionalNote": "optional",
+      "section.letter.copyButton": "Copy text",
+      "section.letter.copiedButton": "✓ Copied",
+      "section.letter.printButton": "Print / Save PDF",
+      "section.letter.legalTitle": "Important legal notes",
+      "section.letter.legal1": "This letter starts a 72-hour clock — the RC may bar discharge within that window.",
+      "section.letter.legal2": "Send by recorded delivery and keep a copy with the receipt.",
+      "section.letter.legal3": "Address to the Hospital Managers / MHA Administration Office specifically.",
+      "section.letter.legal4": "This template is for information only — consider seeking legal advice.",
+      "section.letter.citationTitle": "Harvard citation",
+      "section.rights.title": "Your Rights",
+      "section.rights.subtitle": "Rights available to you (or a patient) under the Mental Health Act 1983 and related legislation. Click any right to expand.",
+      "section.rights.allRights": "All rights",
+      "section.rights.essential": "Essential",
+      "section.rights.important": "Important",
+      "section.rights.useful": "Useful",
+      "section.rights.whatThisMeans": "What this means",
+      "section.rights.howToExercise": "How to exercise this right",
+      "section.rights.appliesTo": "Applies to",
+      "section.rights.legalBasis": "Legal basis",
+      "overview.hero.label": "UK Mental Health System — Reference Guide",
+      "overview.hero.title": "Understanding the Mental Health Act 1983",
+      "overview.hero.description": "A comprehensive, JSON-powered reference covering the UK mental health inpatient system — from the hospital hierarchy and legal powers to patient rights and document types.",
+      "header.search": "Search",
+      "header.searchShortcut": "⌘K",
+      "header.darkMode": "Toggle dark mode",
+      "header.shareLink": "Copy link",
+      "header.linkCopied": "Link copied to clipboard",
+      "search.placeholder": "Search everything... try \"discharge\", \"IMHA\", \"s.23\"",
+      "search.noResults": "No results found",
+      "search.noResultsHint": "Try different keywords",
+      "search.emptyHint": "Start typing to search across all sections",
+      "search.categoryDocument": "Document",
+      "search.categorySection": "MHA Section",
+      "search.categoryRight": "Your Rights",
+      "search.categoryRole": "Org Chart",
+      "orgChart.expandAll": "Expand all",
+      "orgChart.collapseAll": "Collapse all",
+      "overview.disclaimer.title": "Legal disclaimer",
+      "overview.legend.highlighted": "Directly relevant to your detention",
+      "overview.legend.supporting": "Supporting role",
+      "section.discharge.title": "Getting Out — Discharge Pathways",
+      "section.discharge.subtitle": "Every legal route to ending your detention, with step-by-step guidance and tailored advice for your circumstances.",
+      "discharge.tab.routes": "Discharge Routes",
+      "discharge.tab.circumstances": "Your Circumstances",
+      "discharge.routes.intro": "There are six routes to discharge. Most patients should pursue multiple routes simultaneously. Click any route for step-by-step guidance.",
+      "discharge.circumstances.intro": "Select any circumstances that apply to your situation. You will see specific strategies and watch-outs for each combination.",
+      "discharge.circumstances.prompt": "Which of these apply to you?",
+      "discharge.circumstances.none": "Select one or more circumstances above to see tailored strategies.",
+      "discharge.impact.helpful": "Helpful",
+      "discharge.impact.neutral": "Neutral",
+      "discharge.impact.challenging": "Challenging",
+      "discharge.impact.very-challenging": "Very Challenging",
+      "discharge.route.steps": "Step-by-step",
+      "discharge.route.outcomes": "What the panel can order",
+      "discharge.route.strengths": "Strengths",
+      "discharge.route.limitations": "Limitations",
+      "discharge.route.tip": "Key tip",
+      "section.mhasections.purpose": "Purpose",
+      "section.mhasections.whoApplies": "Who applies / responsible",
+      "section.mhasections.keyPoints": "Key Points",
+      "section.documents.emptyTitle": "No documents found",
+      "section.documents.emptySubtitle": "Try a different search term"
+    }
+  },
+  "componentLayouts": {
+    "AppHeader": {
+      "component": "AppBar",
+      "props": {
+        "position": "static",
+        "color": "primary",
+        "elevation": 0,
+        "sx": {
+          "bgcolor": "primary.main"
+        }
+      },
+      "children": [
+        {
+          "component": "Toolbar",
+          "props": {
+            "sx": {
+              "gap": 2,
+              "minHeight": 56
+            }
+          },
+          "children": [
+            {
+              "component": "Box",
+              "props": {
+                "sx": {
+                  "width": 36,
+                  "height": 36,
+                  "borderRadius": 1.5,
+                  "bgcolor": "rgba(255,255,255,0.15)",
+                  "display": "flex",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "fontSize": "1.2rem",
+                  "flexShrink": 0
+                }
+              },
+              "text": "⚕"
+            },
+            {
+              "component": "Box",
+              "children": [
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "h6",
+                    "component": "div",
+                    "sx": {
+                      "fontWeight": 700,
+                      "lineHeight": 1.2,
+                      "color": "white"
+                    }
+                  },
+                  "i18nKey": "app.title"
+                },
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "caption",
+                    "component": "div",
+                    "sx": {
+                      "opacity": 0.75,
+                      "color": "white"
+                    }
+                  },
+                  "i18nKey": "app.subtitle"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "SectionHeader": {
+      "component": "Box",
+      "props": {
+        "sx": {
+          "mb": 3
+        }
+      },
+      "children": [
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "h4",
+            "gutterBottom": true
+          },
+          "i18nKey": "{{titleKey}}"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "body2",
+            "color": "text.secondary",
+            "sx": {
+              "mb": 0.5
+            }
+          },
+          "i18nKey": "{{subtitleKey}}"
+        }
+      ]
+    },
+    "LegalDisclaimer": {
+      "component": "Paper",
+      "props": {
+        "sx": {
+          "p": 2.5,
+          "bgcolor": "grey.50",
+          "mt": 4
+        }
+      },
+      "children": [
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "subtitle2",
+            "color": "text.secondary",
+            "gutterBottom": true
+          },
+          "i18nKey": "overview.disclaimer.title"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "caption",
+            "color": "text.disabled",
+            "sx": {
+              "lineHeight": 1.7,
+              "display": "block"
+            }
+          },
+          "dataKey": "app.disclaimer"
+        }
+      ]
+    },
+    "DocumentsEmptyState": {
+      "component": "Box",
+      "props": {
+        "sx": {
+          "textAlign": "center",
+          "py": 8
+        }
+      },
+      "children": [
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "h2",
+            "sx": {
+              "mb": 1
+            }
+          },
+          "text": "🔍"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "body1",
+            "color": "text.secondary",
+            "fontWeight": 500
+          },
+          "i18nKey": "section.documents.emptyTitle"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "body2",
+            "color": "text.disabled",
+            "sx": {
+              "mt": 0.5
+            }
+          },
+          "i18nKey": "section.documents.emptySubtitle"
+        }
+      ]
+    },
+    "DocumentsBrowserHeader": {
+      "component": "Box",
+      "props": {
+        "sx": {
+          "mb": 3
+        }
+      },
+      "children": [
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "h4",
+            "gutterBottom": true
+          },
+          "i18nKey": "section.documents.title"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "body2",
+            "color": "text.secondary",
+            "sx": {
+              "mb": 0.5
+            }
+          },
+          "i18nKey": "section.documents.subtitle"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "caption",
+            "color": "text.disabled"
+          },
+          "dataKey": "stats"
+        }
+      ]
+    },
+    "MHASectionsHeader": {
+      "component": "Box",
+      "props": {
+        "sx": {
+          "mb": 3
+        }
+      },
+      "children": [
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "h4",
+            "gutterBottom": true
+          },
+          "i18nKey": "section.mhasections.title"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "body2",
+            "color": "text.secondary",
+            "sx": {
+              "mb": 0.5
+            }
+          },
+          "i18nKey": "section.mhasections.subtitle"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "caption",
+            "color": "text.disabled"
+          },
+          "dataKey": "stats"
+        }
+      ]
+    },
+    "RightsHeader": {
+      "component": "Box",
+      "props": {
+        "sx": {
+          "mb": 3
+        }
+      },
+      "children": [
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "h4",
+            "gutterBottom": true
+          },
+          "i18nKey": "section.rights.title"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "body2",
+            "color": "text.secondary",
+            "sx": {
+              "mb": 0.5
+            }
+          },
+          "i18nKey": "section.rights.subtitle"
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "caption",
+            "color": "text.disabled"
+          },
+          "dataKey": "stats"
+        }
+      ]
+    },
+    "MHASectionsDetail": {
+      "component": "Box",
+      "children": [
+        {
+          "component": "Grid",
+          "props": {
+            "container": true,
+            "spacing": 2,
+            "sx": {
+              "mb": 2
+            }
+          },
+          "children": [
+            {
+              "component": "Grid",
+              "props": {
+                "size": {
+                  "xs": 12,
+                  "md": 6
+                }
+              },
+              "children": [
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "caption",
+                    "color": "text.secondary",
+                    "fontWeight": 700,
+                    "textTransform": "uppercase",
+                    "letterSpacing": 0.5
+                  },
+                  "i18nKey": "section.mhasections.purpose"
+                },
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "body2",
+                    "sx": {
+                      "mt": 0.5,
+                      "lineHeight": 1.6
+                    }
+                  },
+                  "dataKey": "purpose"
+                }
+              ]
+            },
+            {
+              "component": "Grid",
+              "props": {
+                "size": {
+                  "xs": 12,
+                  "md": 6
+                }
+              },
+              "children": [
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "caption",
+                    "color": "text.secondary",
+                    "fontWeight": 700,
+                    "textTransform": "uppercase",
+                    "letterSpacing": 0.5
+                  },
+                  "i18nKey": "section.mhasections.whoApplies"
+                },
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "body2",
+                    "sx": {
+                      "mt": 0.5,
+                      "lineHeight": 1.6
+                    }
+                  },
+                  "dataKey": "whoApplies"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "Typography",
+          "props": {
+            "variant": "caption",
+            "color": "text.secondary",
+            "fontWeight": 700,
+            "textTransform": "uppercase",
+            "letterSpacing": 0.5
+          },
+          "i18nKey": "section.mhasections.keyPoints"
+        },
+        {
+          "component": "KeyPoints"
+        }
+      ]
+    },
+    "RightsDetail": {
+      "component": "Box",
+      "props": {
+        "sx": {
+          "display": "flex",
+          "flexDirection": "column",
+          "gap": 2
+        }
+      },
+      "children": [
+        {
+          "component": "Box",
+          "children": [
+            {
+              "component": "Typography",
+              "props": {
+                "variant": "caption",
+                "color": "text.disabled",
+                "fontWeight": 700,
+                "textTransform": "uppercase",
+                "letterSpacing": 0.5,
+                "display": "block",
+                "gutterBottom": true
+              },
+              "i18nKey": "section.rights.whatThisMeans"
+            },
+            {
+              "component": "Typography",
+              "props": {
+                "variant": "body2",
+                "color": "text.secondary",
+                "sx": {
+                  "lineHeight": 1.6
+                }
+              },
+              "dataKey": "detail"
+            }
+          ]
+        },
+        {
+          "component": "Alert",
+          "props": {
+            "severity": "success",
+            "variant": "outlined",
+            "sx": {
+              "py": 1
+            }
+          },
+          "children": [
+            {
+              "component": "Typography",
+              "props": {
+                "variant": "caption",
+                "fontWeight": 700,
+                "textTransform": "uppercase",
+                "letterSpacing": 0.5,
+                "display": "block",
+                "color": "success.dark",
+                "gutterBottom": true
+              },
+              "i18nKey": "section.rights.howToExercise"
+            },
+            {
+              "component": "Typography",
+              "props": {
+                "variant": "body2"
+              },
+              "dataKey": "howToExercise"
+            }
+          ]
+        },
+        {
+          "component": "Grid",
+          "props": {
+            "container": true,
+            "spacing": 2
+          },
+          "children": [
+            {
+              "component": "Grid",
+              "props": {
+                "size": {
+                  "xs": 12,
+                  "sm": 6
+                }
+              },
+              "children": [
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "caption",
+                    "color": "text.disabled",
+                    "fontWeight": 700,
+                    "textTransform": "uppercase",
+                    "letterSpacing": 0.5,
+                    "display": "block",
+                    "gutterBottom": true
+                  },
+                  "i18nKey": "section.rights.appliesTo"
+                },
+                {
+                  "component": "AppliesToChips"
+                }
+              ]
+            },
+            {
+              "component": "Grid",
+              "props": {
+                "size": {
+                  "xs": 12,
+                  "sm": 6
+                }
+              },
+              "children": [
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "caption",
+                    "color": "text.disabled",
+                    "fontWeight": 700,
+                    "textTransform": "uppercase",
+                    "letterSpacing": 0.5,
+                    "display": "block",
+                    "gutterBottom": true
+                  },
+                  "i18nKey": "section.rights.legalBasis"
+                },
+                {
+                  "component": "Typography",
+                  "props": {
+                    "variant": "caption",
+                    "sx": {
+                      "fontFamily": "monospace",
+                      "color": "text.secondary"
+                    }
+                  },
+                  "dataKey": "legalBasis"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "layouts": {
+    "orgChart": {
+      "variant": "collapsibleTree",
+      "defaultExpandDepth": 2,
+      "showRelevanceOnHover": false,
+      "highlightColor": "primary"
+    },
+    "documentBrowser": {
+      "variant": "filteredList",
+      "searchable": true,
+      "categoryFilter": true,
+      "defaultCategory": null
+    },
+    "mhaSections": {
+      "variant": "accordion",
+      "defaultExpanded": "s.3",
+      "filterCategories": [
+        "all",
+        "detention",
+        "discharge",
+        "rights",
+        "community",
+        "police"
+      ]
+    },
+    "letterGenerator": {
+      "variant": "splitFormPreview",
+      "formSide": "left",
+      "previewSide": "right"
+    },
+    "rightsGuide": {
+      "variant": "priorityAccordion",
+      "defaultExpanded": "imha",
+      "priorityFilter": true
+    },
+    "dischargePathways": {
+      "variant": "two-tab"
+    }
+  },
+  "orgChart": {
+    "id": "trust-board",
+    "title": "NHS Trust Board",
+    "subtitle": "Chair + Non-Executive Directors",
+    "relevance": "Holds ultimate accountability. Hospital Managers under the MHA are delegated from this body.",
+    "highlight": false,
+    "children": [
+      {
+        "id": "ceo",
+        "title": "Chief Executive Officer",
+        "subtitle": "Trust CEO",
+        "relevance": "Leads the trust operationally. Rarely involved in individual patient decisions.",
+        "highlight": false,
+        "children": [
+          {
+            "id": "medical-director",
+            "title": "Medical Director",
+            "subtitle": "Executive Medical Lead",
+            "relevance": "Senior clinician overseeing all medical practice. May be involved in complex MHA disputes.",
+            "highlight": false,
+            "children": [
+              {
+                "id": "clinical-director",
+                "title": "Clinical Director",
+                "subtitle": "Per Division (e.g. Acute, Forensic, CAMHS)",
+                "relevance": "Leads a clinical division. Oversees Responsible Clinicians within their division.",
+                "highlight": false,
+                "children": [
+                  {
+                    "id": "rc",
+                    "title": "Responsible Clinician (RC)",
+                    "subtitle": "Consultant Psychiatrist (usually)",
+                    "relevance": "KEY PERSON — Holds your Section 3. Can bar nearest relative discharge under s.25. Can discharge you under s.23.",
+                    "highlight": true,
+                    "children": [
+                      {
+                        "id": "junior-docs",
+                        "title": "Junior Doctors / Specialty Registrars",
+                        "subtitle": "SHO, SpR, CT1–3, ST4–6",
+                        "relevance": "Day-to-day medical reviews. Write notes and recommendations but RC has final say.",
+                        "highlight": false,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "nursing-director",
+            "title": "Director of Nursing",
+            "subtitle": "Chief Nurse / Executive Nurse",
+            "relevance": "Leads all nursing staff. Complaints about ward nursing care go through this chain.",
+            "highlight": false,
+            "children": [
+              {
+                "id": "matron",
+                "title": "Modern Matron",
+                "subtitle": "Covers multiple wards",
+                "relevance": "Oversees ward managers. Good escalation point for ward-level concerns.",
+                "highlight": false,
+                "children": [
+                  {
+                    "id": "ward-manager",
+                    "title": "Ward Manager",
+                    "subtitle": "Band 7 Nurse",
+                    "relevance": "Runs the ward day-to-day. Manages staffing, ward rules, and immediate concerns.",
+                    "highlight": true,
+                    "children": [
+                      {
+                        "id": "nurses",
+                        "title": "Staff Nurses",
+                        "subtitle": "Band 5–6 (RMN qualified)",
+                        "relevance": "Day-to-day nursing care. Named Nurse is your primary nursing contact.",
+                        "highlight": false,
+                        "children": [
+                          {
+                            "id": "hca",
+                            "title": "Healthcare Assistants",
+                            "subtitle": "Band 2–3",
+                            "relevance": "Support workers on the ward. Observations, activities, general support.",
+                            "highlight": false,
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ops-director",
+            "title": "Director of Operations",
+            "subtitle": "COO equivalent",
+            "relevance": "Oversees operational delivery. Bed management and service capacity sit here.",
+            "highlight": false,
+            "children": [
+              {
+                "id": "service-manager",
+                "title": "Service Manager",
+                "subtitle": "Per service line",
+                "relevance": "Manages non-clinical operations for a group of wards/services.",
+                "highlight": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "mha-admin",
+            "title": "MHA Administration / Hospital Managers Office",
+            "subtitle": "Mental Health Act Office",
+            "relevance": "CRITICAL — Processes s.23 nearest relative discharge notices. Organises Hospital Managers Hearings. Your mum's letter goes HERE.",
+            "highlight": true,
+            "children": [
+              {
+                "id": "mha-manager-panel",
+                "title": "Hospital Managers Panel",
+                "subtitle": "Non-exec / lay panel members",
+                "relevance": "Can discharge you independently. Hear cases when RC bars nearest relative discharge or on routine review.",
+                "highlight": true,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "allied",
+        "title": "Allied Health Professionals",
+        "subtitle": "Multidisciplinary Team (MDT)",
+        "relevance": "Part of your care team. Their input informs RC decisions and tribunal reports.",
+        "highlight": false,
+        "children": [
+          {
+            "id": "psychologist",
+            "title": "Clinical Psychologist",
+            "subtitle": "Therapy & assessment",
+            "relevance": "Psychological formulation and therapy. Often provides evidence for tribunals.",
+            "highlight": false,
+            "children": []
+          },
+          {
+            "id": "social-worker",
+            "title": "Social Worker / AMHP",
+            "subtitle": "Approved Mental Health Professional",
+            "relevance": "AMHPs made the original s.3 application. Social workers support discharge planning and community care.",
+            "highlight": false,
+            "children": []
+          },
+          {
+            "id": "ot",
+            "title": "Occupational Therapist",
+            "subtitle": "OT",
+            "relevance": "Assesses functional ability. Reports on daily living skills inform discharge readiness.",
+            "highlight": false,
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "independent",
+        "title": "Independent Oversight",
+        "subtitle": "External to the Trust",
+        "relevance": "Bodies that oversee the trust from outside. Important if you feel the trust isn't following the law.",
+        "highlight": false,
+        "children": [
+          {
+            "id": "cqc",
+            "title": "Care Quality Commission (CQC)",
+            "subtitle": "Regulator & Inspector",
+            "relevance": "Regulates and inspects. You can complain to CQC. They also manage SOADs for treatment.",
+            "highlight": false,
+            "children": []
+          },
+          {
+            "id": "imha",
+            "title": "Independent Mental Health Advocate (IMHA)",
+            "subtitle": "Free advocacy service",
+            "relevance": "YOU ARE ENTITLED TO THIS. Free advocacy to help you understand and exercise your rights under the MHA.",
+            "highlight": true,
+            "children": []
+          },
+          {
+            "id": "tribunal",
+            "title": "Mental Health Tribunal",
+            "subtitle": "First-tier Tribunal (Health, Education & Social Care)",
+            "relevance": "JUDICIAL BODY — Can order your discharge. You can apply once per detention period. Nearest relative can apply if RC bars discharge.",
+            "highlight": true,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "documentCategories": [
+    {
+      "category": "Mental Health Act (MHA) Statutory Forms",
+      "description": "Legal documents required under the Mental Health Act 1983 (as amended 2007). These are prescribed forms set by regulations.",
+      "documents": [
+        {
+          "name": "Form H1",
+          "description": "Record of detention under Section 2 (admission for assessment)"
+        },
+        {
+          "name": "Form H2",
+          "description": "Record of detention under Section 3 (admission for treatment)"
+        },
+        {
+          "name": "Form H3",
+          "description": "Record of detention under Section 4 (emergency admission)"
+        },
+        {
+          "name": "Form H4",
+          "description": "Record of detention under Section 5(2) (doctor's holding power)"
+        },
+        {
+          "name": "Form H5",
+          "description": "Record of detention under Section 5(4) (nurse's holding power)"
+        },
+        {
+          "name": "Form H6",
+          "description": "Record of receipt of report for barring discharge by nearest relative (Section 25)"
+        },
+        {
+          "name": "Form CTO1",
+          "description": "Community Treatment Order"
+        },
+        {
+          "name": "Form CTO2",
+          "description": "Variation of conditions of CTO"
+        },
+        {
+          "name": "Form CTO3",
+          "description": "Notice of recall to hospital under CTO"
+        },
+        {
+          "name": "Form CTO4",
+          "description": "Record of patient's detention in hospital after recall"
+        },
+        {
+          "name": "Form CTO5",
+          "description": "Revocation of CTO"
+        },
+        {
+          "name": "Form CTO6",
+          "description": "Authority for transfer of recalled community patient to hospital"
+        },
+        {
+          "name": "Form CTO7",
+          "description": "Report extending CTO (Section 20A)"
+        },
+        {
+          "name": "Form CTO8",
+          "description": "Renewal of CTO — confirmed by AMHP"
+        },
+        {
+          "name": "Form CTO9",
+          "description": "Discharge of community patient by responsible clinician"
+        },
+        {
+          "name": "Form CTO10",
+          "description": "Discharge of community patient by hospital managers"
+        },
+        {
+          "name": "Form CTO11",
+          "description": "Discharge of community patient by nearest relative"
+        },
+        {
+          "name": "Form CTO12",
+          "description": "Barring of discharge by nearest relative of community patient"
+        },
+        {
+          "name": "Form T1",
+          "description": "Certificate of consent to treatment (Section 58 — patient consenting)"
+        },
+        {
+          "name": "Form T2",
+          "description": "Certificate of consent to treatment (approved clinician)"
+        },
+        {
+          "name": "Form T3",
+          "description": "Certificate of second opinion (SOAD) — treatment without consent (Section 58)"
+        },
+        {
+          "name": "Form T4",
+          "description": "Certificate of consent to treatment — ECT (Section 58A)"
+        },
+        {
+          "name": "Form T5",
+          "description": "Certificate of second opinion — ECT without consent"
+        },
+        {
+          "name": "Form T6",
+          "description": "Certificate of consent/second opinion — community patient treatment"
+        },
+        {
+          "name": "Form H7",
+          "description": "Authority for transfer between hospitals (Section 19)"
+        },
+        {
+          "name": "Form H8",
+          "description": "Authority for transfer from hospital to guardianship"
+        },
+        {
+          "name": "Form H9",
+          "description": "Renewal of authority for detention (Section 20)"
+        },
+        {
+          "name": "Form H10",
+          "description": "Renewal of detention — AMHP confirmation"
+        },
+        {
+          "name": "Form H11",
+          "description": "Report on community patient who has not been recalled (Section 20A)"
+        },
+        {
+          "name": "Form H12",
+          "description": "Discharge by responsible clinician (Section 23)"
+        },
+        {
+          "name": "Form H13",
+          "description": "Discharge by hospital managers (Section 23)"
+        },
+        {
+          "name": "Form H14",
+          "description": "Discharge by nearest relative — order for discharge (Section 23)"
+        },
+        {
+          "name": "Form H15",
+          "description": "Barring report by responsible clinician (Section 25)"
+        },
+        {
+          "name": "Section 17 Leave Form",
+          "description": "Authorisation of leave of absence from hospital"
+        },
+        {
+          "name": "Section 132 Rights Form",
+          "description": "Record that patient has been informed of their rights under detention"
+        },
+        {
+          "name": "Section 130A IMHA Referral",
+          "description": "Referral to Independent Mental Health Advocate"
+        }
+      ]
+    },
+    {
+      "category": "Admission & Assessment Documents",
+      "description": "Forms completed on or around admission to the ward.",
+      "documents": [
+        {
+          "name": "Admission Assessment Form",
+          "description": "Comprehensive initial nursing assessment covering presenting problems, mental state, physical health, social circumstances"
+        },
+        {
+          "name": "Clerking Proforma",
+          "description": "Medical clerking by junior doctor — history, examination, investigations, initial plan"
+        },
+        {
+          "name": "Mental State Examination (MSE)",
+          "description": "Structured assessment of appearance, behaviour, speech, mood, thought, perception, cognition, insight"
+        },
+        {
+          "name": "Physical Health Assessment",
+          "description": "Physical examination findings, observations, NEWS score"
+        },
+        {
+          "name": "Admission Checklist",
+          "description": "Property inventory, personal belongings, restricted items search, clothing, ID"
+        },
+        {
+          "name": "Patient Property Form",
+          "description": "Itemised list of possessions brought onto ward including valuables"
+        },
+        {
+          "name": "Restricted Items Search Record",
+          "description": "Documentation of search for sharps, ligatures, contraband on admission"
+        },
+        {
+          "name": "Patient Information Leaflet Acknowledgment",
+          "description": "Record patient received information about ward, rights, complaints procedure"
+        },
+        {
+          "name": "Bed Management / Allocation Form",
+          "description": "Ward and bed assignment documentation"
+        },
+        {
+          "name": "Next of Kin / Emergency Contact Form",
+          "description": "Contact details for family, nearest relative, and emergency contacts"
+        },
+        {
+          "name": "Interpreter / Communication Needs Assessment",
+          "description": "Language, sensory, or communication requirements"
+        }
+      ]
+    },
+    {
+      "category": "Risk Assessment & Management",
+      "description": "Documents relating to risk identification and mitigation.",
+      "documents": [
+        {
+          "name": "Clinical Risk Assessment",
+          "description": "Structured risk assessment covering harm to self, harm to others, vulnerability, self-neglect (e.g. using FACE, GRiST, or trust-specific tools)"
+        },
+        {
+          "name": "Risk Management Plan",
+          "description": "Specific interventions to manage identified risks including observation levels, restrictions, leave conditions"
+        },
+        {
+          "name": "HCR-20 (Historical Clinical Risk-20)",
+          "description": "Structured professional judgement tool for violence risk (forensic settings)"
+        },
+        {
+          "name": "START Assessment",
+          "description": "Short-Term Assessment of Risk and Treatability — strengths-based risk tool"
+        },
+        {
+          "name": "Suicide Risk Assessment / Safety Plan",
+          "description": "Specific assessment of suicidal ideation, intent, plans, protective factors"
+        },
+        {
+          "name": "Observation Level Prescription",
+          "description": "Prescribed level of nursing observation (general, intermittent, within eyesight, within arm's length)"
+        },
+        {
+          "name": "Positive Behavioural Support Plan",
+          "description": "Proactive strategies for managing challenging behaviour without restrictive interventions"
+        },
+        {
+          "name": "Ligature Risk Assessment (Environmental)",
+          "description": "Ward-level assessment of ligature anchor points — usually displayed in ward office"
+        },
+        {
+          "name": "Absconding Risk Assessment",
+          "description": "Assessment of risk of patient leaving without authorisation"
+        },
+        {
+          "name": "Falls Risk Assessment",
+          "description": "Assessment of falls risk particularly for older adults or medicated patients"
+        },
+        {
+          "name": "Venous Thromboembolism (VTE) Risk Assessment",
+          "description": "Required for all inpatients — risk of blood clots from inactivity/medication"
+        }
+      ]
+    },
+    {
+      "category": "Care Planning",
+      "description": "Documents forming the patient's ongoing care plan and recovery journey.",
+      "documents": [
+        {
+          "name": "Care Plan",
+          "description": "Core document setting out needs, goals, interventions, named nurse, review dates — often using Recovery/WRAP model"
+        },
+        {
+          "name": "CPA (Care Programme Approach) Documentation",
+          "description": "For patients on CPA — comprehensive multi-agency care coordination document"
+        },
+        {
+          "name": "Recovery Plan / Recovery Star",
+          "description": "Patient-centred recovery goals using recovery star or similar outcome measure"
+        },
+        {
+          "name": "Wellness Recovery Action Plan (WRAP)",
+          "description": "Self-management and crisis planning tool completed with patient"
+        },
+        {
+          "name": "My Shared Pathway",
+          "description": "Used in forensic/secure settings — structured care pathway documentation"
+        },
+        {
+          "name": "Advance Decision / Advance Statement",
+          "description": "Patient's documented wishes regarding future treatment if they lose capacity"
+        },
+        {
+          "name": "Crisis Plan / Relapse Prevention Plan",
+          "description": "Identifies early warning signs, triggers, and planned responses to prevent relapse"
+        },
+        {
+          "name": "Discharge Planning Form",
+          "description": "Structured plan for discharge including accommodation, community support, medication, follow-up"
+        },
+        {
+          "name": "Section 117 Aftercare Plan",
+          "description": "Statutory aftercare plan for patients discharged from Section 3 — joint health and social care responsibility"
+        },
+        {
+          "name": "Leave Plan",
+          "description": "Detailed plan for Section 17 leave including conditions, destinations, escorts, timings"
+        },
+        {
+          "name": "1:1 Session Record",
+          "description": "Documentation of individual sessions between patient and named nurse or keyworker"
+        },
+        {
+          "name": "Patient Goals Sheet",
+          "description": "Patient's own goals for admission, reviewed in ward rounds"
+        }
+      ]
+    },
+    {
+      "category": "Medical & Prescribing Documents",
+      "description": "Clinical and pharmaceutical documentation.",
+      "documents": [
+        {
+          "name": "Drug Chart / Medication Administration Record (MAR)",
+          "description": "Prescription chart for all medications — regular, PRN, once-only, and IV"
+        },
+        {
+          "name": "Controlled Drug Register Entry",
+          "description": "Record of controlled drug administration (separate from main drug chart)"
+        },
+        {
+          "name": "Rapid Tranquillisation Record",
+          "description": "Documentation of emergency sedation including clinical justification, medication, monitoring"
+        },
+        {
+          "name": "Clozapine Monitoring Form",
+          "description": "Blood test results and monitoring for patients on clozapine (mandatory bloods)"
+        },
+        {
+          "name": "Lithium Monitoring Form",
+          "description": "Blood level monitoring for lithium carbonate"
+        },
+        {
+          "name": "Depot Injection Record",
+          "description": "Tracking chart for long-acting antipsychotic injections (site rotation, dates, doses)"
+        },
+        {
+          "name": "ECG Request / Results",
+          "description": "Electrocardiogram requests — required baseline for many antipsychotics"
+        },
+        {
+          "name": "Blood Test Request Forms",
+          "description": "Pathology requests — FBC, U&E, LFT, TFT, glucose, lipids, prolactin, drug levels"
+        },
+        {
+          "name": "Physical Health Monitoring Chart",
+          "description": "Ongoing monitoring — weight, BMI, blood pressure, blood glucose, metabolic syndrome screening"
+        },
+        {
+          "name": "NEWS2 Chart",
+          "description": "National Early Warning Score chart — tracks vital signs and triggers clinical escalation"
+        },
+        {
+          "name": "Fluid Balance Chart",
+          "description": "Intake and output monitoring — used when clinically indicated"
+        },
+        {
+          "name": "Allergy and Adverse Reaction Record",
+          "description": "Documented allergies and previous adverse drug reactions"
+        },
+        {
+          "name": "Medicines Reconciliation Form",
+          "description": "Verification of all medications on admission against GP records and patient report"
+        },
+        {
+          "name": "Covert Medication Form",
+          "description": "Authorisation for administering medication covertly — requires capacity assessment and best interests decision"
+        },
+        {
+          "name": "SOAD Request Form",
+          "description": "Request to CQC for Second Opinion Appointed Doctor under Section 58"
+        },
+        {
+          "name": "PRN Protocol",
+          "description": "Standing instructions for as-needed medication including thresholds and maximum doses"
+        }
+      ]
+    },
+    {
+      "category": "Nursing Documentation",
+      "description": "Day-to-day nursing records and ward-level documentation.",
+      "documents": [
+        {
+          "name": "Daily Nursing Notes / Progress Notes",
+          "description": "Shift-by-shift narrative record of patient's presentation, behaviour, interactions, interventions"
+        },
+        {
+          "name": "Observation Record Sheet",
+          "description": "Documented checks at prescribed intervals — records patient location and presentation"
+        },
+        {
+          "name": "Handover Sheet",
+          "description": "Shift handover document summarising all patients' current status and immediate needs"
+        },
+        {
+          "name": "Ward Round Record",
+          "description": "Minutes of MDT ward round — RC decisions, patient views, plan agreed"
+        },
+        {
+          "name": "MDT Meeting Record",
+          "description": "Multidisciplinary team meeting notes — broader than ward round, includes all disciplines"
+        },
+        {
+          "name": "Escort Record / Leave Record",
+          "description": "Documentation of escorted or unescorted leave — times out/in, presentation, any incidents"
+        },
+        {
+          "name": "Activities of Daily Living (ADL) Assessment",
+          "description": "Assessment of self-care, hygiene, nutrition, sleep, mobility"
+        },
+        {
+          "name": "Sleep Chart",
+          "description": "Record of sleep patterns — often used with observation records"
+        },
+        {
+          "name": "Food and Fluid Intake Record",
+          "description": "Monitoring dietary intake — used when concerns about nutrition or eating disorders"
+        },
+        {
+          "name": "Bowel Chart",
+          "description": "Monitoring bowel function — common side effect monitoring for antipsychotics/opioids"
+        },
+        {
+          "name": "Engagement and Activity Record",
+          "description": "Documentation of patient's participation in ward activities, groups, and therapeutic programmes"
+        },
+        {
+          "name": "Smoking / Vaping Record",
+          "description": "Documentation of supervised smoking breaks or nicotine replacement therapy"
+        },
+        {
+          "name": "Patient Search Record",
+          "description": "Documentation of any search of patient's room or person — reason, authorisation, findings"
+        },
+        {
+          "name": "Mail / Phone Monitoring Record",
+          "description": "If restrictions on correspondence or phone use are in place (rare, requires specific authority)"
+        },
+        {
+          "name": "Visitors Record",
+          "description": "Log of visits including any restrictions or supervised visits"
+        }
+      ]
+    },
+    {
+      "category": "Incident & Safeguarding",
+      "description": "Documentation of incidents, restraint, seclusion, and safeguarding.",
+      "documents": [
+        {
+          "name": "Datix Incident Report Form",
+          "description": "NHS incident reporting form — accidents, assaults, near misses, medication errors, absconding, complaints"
+        },
+        {
+          "name": "Restraint Record / Physical Intervention Form",
+          "description": "Detailed record of any physical restraint — type, duration, staff involved, patient response, debrief"
+        },
+        {
+          "name": "Seclusion Record",
+          "description": "Documentation of seclusion episode — start/end times, medical reviews (every 4 hours), nursing reviews (every 2 hours)"
+        },
+        {
+          "name": "Seclusion Review Form",
+          "description": "MDT review of seclusion continuation — required at defined intervals under MHA Code of Practice"
+        },
+        {
+          "name": "Post-Incident Debrief Form",
+          "description": "Debrief with patient and staff following restrictive intervention or serious incident"
+        },
+        {
+          "name": "Body Map",
+          "description": "Anatomical diagram marking location of injuries — used after incidents, assaults, or self-harm"
+        },
+        {
+          "name": "Safeguarding Adults Referral Form",
+          "description": "Referral to local authority safeguarding team under Care Act 2014"
+        },
+        {
+          "name": "Safeguarding Children Referral Form",
+          "description": "Referral to children's social services if concerns about a child connected to the patient"
+        },
+        {
+          "name": "RIDDOR Report",
+          "description": "Reporting of Injuries, Diseases and Dangerous Occurrences — HSE reporting for serious staff/patient injuries"
+        },
+        {
+          "name": "Police Liaison / Section 136 Record",
+          "description": "Documentation of police involvement or s.136 place of safety attendance"
+        },
+        {
+          "name": "Duty of Candour Letter",
+          "description": "Formal notification to patient/family when a safety incident has caused harm"
+        },
+        {
+          "name": "Serious Incident Investigation Report (SI / STEIS)",
+          "description": "Formal investigation report for serious incidents — deaths, serious harm, serious near misses"
+        },
+        {
+          "name": "Complaint Acknowledgment / Response",
+          "description": "Formal complaint handling documentation under NHS complaints procedure"
+        }
+      ]
+    },
+    {
+      "category": "Capacity & Consent",
+      "description": "Documents relating to mental capacity assessment and consent to treatment.",
+      "documents": [
+        {
+          "name": "Mental Capacity Assessment Form",
+          "description": "Structured assessment under Mental Capacity Act 2005 — decision-specific, time-specific"
+        },
+        {
+          "name": "Best Interests Decision Record",
+          "description": "Documentation of best interests decision when patient lacks capacity for a specific decision"
+        },
+        {
+          "name": "Consent to Treatment Form",
+          "description": "Patient's informed consent to specific treatments — separate from MHA consent forms"
+        },
+        {
+          "name": "Consent to Share Information Form",
+          "description": "Patient's consent for information sharing with named individuals or agencies"
+        },
+        {
+          "name": "DoLS (Deprivation of Liberty Safeguards) Form",
+          "description": "Application for authorisation of deprivation of liberty for incapacitated patients (being replaced by LPS)"
+        },
+        {
+          "name": "Advance Decision to Refuse Treatment (ADRT)",
+          "description": "Patient's legally binding refusal of specific future treatment if they lose capacity"
+        },
+        {
+          "name": "Lasting Power of Attorney Record",
+          "description": "Record of any registered LPA for health and welfare or property and affairs"
+        },
+        {
+          "name": "IMCA Referral Form",
+          "description": "Referral for Independent Mental Capacity Advocate where patient has no one to consult"
+        }
+      ]
+    },
+    {
+      "category": "Allied Health Professional Documents",
+      "description": "Documents from psychology, OT, social work, pharmacy, and other disciplines.",
+      "documents": [
+        {
+          "name": "Psychology Assessment Report",
+          "description": "Psychological formulation, psychometric test results, diagnostic assessment"
+        },
+        {
+          "name": "Psychology Session Notes",
+          "description": "Record of individual or group therapy sessions"
+        },
+        {
+          "name": "Neuropsychological Assessment Report",
+          "description": "Cognitive testing results — memory, attention, executive function"
+        },
+        {
+          "name": "OT Initial Assessment",
+          "description": "Occupational therapy assessment of functional ability, daily living skills, occupational needs"
+        },
+        {
+          "name": "OT Treatment Plan",
+          "description": "Occupational therapy intervention plan — activities, graded tasks, community preparation"
+        },
+        {
+          "name": "MOHOST / AMPS Assessment",
+          "description": "Standardised OT assessment tools (Model of Human Occupation Screening Tool / Assessment of Motor and Process Skills)"
+        },
+        {
+          "name": "Social Circumstances Report",
+          "description": "Social worker's assessment of housing, finances, relationships, community support, benefits"
+        },
+        {
+          "name": "Carers Assessment / Referral",
+          "description": "Assessment of carer needs under Care Act 2014 or referral to carers' services"
+        },
+        {
+          "name": "Housing / Accommodation Referral",
+          "description": "Referral to supported accommodation, housing association, or local authority housing"
+        },
+        {
+          "name": "Benefits Assessment / DWP Liaison",
+          "description": "Documentation relating to benefits claims, fitness for work, PIP, ESA"
+        },
+        {
+          "name": "Pharmacy Medication Review",
+          "description": "Clinical pharmacist's review of medication regimen — interactions, side effects, optimisation"
+        },
+        {
+          "name": "Speech and Language Therapy Assessment",
+          "description": "Communication or swallowing assessment where indicated"
+        },
+        {
+          "name": "Dietitian Assessment / Nutrition Plan",
+          "description": "Nutritional assessment and dietary plan — particularly for eating disorders or metabolic concerns"
+        },
+        {
+          "name": "Physiotherapy Assessment",
+          "description": "Physical function assessment where mobility or physical rehabilitation is needed"
+        },
+        {
+          "name": "Tribunal Report — Social Worker",
+          "description": "Social circumstances report prepared for Mental Health Tribunal"
+        },
+        {
+          "name": "Tribunal Report — Psychologist",
+          "description": "Psychological report prepared for Mental Health Tribunal"
+        },
+        {
+          "name": "Tribunal Report — RC / Medical",
+          "description": "Responsible Clinician's report for Mental Health Tribunal"
+        },
+        {
+          "name": "Tribunal Report — Nursing",
+          "description": "Nursing report for Mental Health Tribunal covering ward behaviour and engagement"
+        }
+      ]
+    },
+    {
+      "category": "Administrative & Governance",
+      "description": "Trust-level administrative and governance documentation.",
+      "documents": [
+        {
+          "name": "Patient Identification Wristband Record",
+          "description": "Record of patient ID band allocation"
+        },
+        {
+          "name": "PALS Contact Record",
+          "description": "Patient Advice and Liaison Service contact record"
+        },
+        {
+          "name": "Formal Complaint Form",
+          "description": "NHS complaints procedure documentation"
+        },
+        {
+          "name": "Subject Access Request Form",
+          "description": "Patient request for copies of their medical records under GDPR Article 15"
+        },
+        {
+          "name": "Information Sharing Agreement",
+          "description": "Multi-agency information sharing protocol documentation"
+        },
+        {
+          "name": "Referral Form (Inbound)",
+          "description": "Referral from GP, A&E, crisis team, CMHT, or other service"
+        },
+        {
+          "name": "Referral Form (Outbound)",
+          "description": "Referral to community services, CMHT, specialist services on discharge"
+        },
+        {
+          "name": "Discharge Summary",
+          "description": "Comprehensive summary sent to GP and community team — diagnosis, treatment, medication, follow-up plan"
+        },
+        {
+          "name": "Death Notification / Bereavement Pack",
+          "description": "Documentation following patient death — notification to coroner, family, CQC"
+        },
+        {
+          "name": "Clinical Audit Form",
+          "description": "Internal audit documentation — e.g. prescribing audit, care plan audit, MHA compliance audit"
+        },
+        {
+          "name": "Staff Supervision Record",
+          "description": "Record of clinical supervision sessions (staff document, not patient-facing)"
+        },
+        {
+          "name": "Transfer Summary",
+          "description": "Clinical summary for patient transfer between wards or hospitals"
+        },
+        {
+          "name": "AWOL / Missing Patient Form",
+          "description": "Documentation when a detained patient is absent without leave — triggers s.18 powers"
+        }
+      ]
+    }
+  ],
+  "mhaSections": [
+    {
+      "section": "s.2",
+      "title": "Admission for Assessment",
+      "category": "detention",
+      "duration": "Up to 28 days",
+      "renewable": false,
+      "purpose": "Admission and detention for assessment (and treatment) of mental disorder.",
+      "whoApplies": "AMHP + 2 doctors (at least 1 s.12 approved). Nearest relative can also apply.",
+      "keyPoints": [
+        "Cannot be renewed — must convert to s.3 or discharge",
+        "Nearest relative can apply to Tribunal within 14 days",
+        "Automatic referral to Tribunal if not applied within 14 days",
+        "Nearest relative can object to admission (AMHP must consult)",
+        "IMHA entitlement applies",
+        "s.132 rights must be given on admission"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.3",
+      "title": "Admission for Treatment",
+      "category": "detention",
+      "duration": "Up to 6 months (renewable)",
+      "renewable": true,
+      "purpose": "Detention for treatment of mental disorder. The primary long-term detention power.",
+      "whoApplies": "AMHP + 2 doctors (at least 1 s.12 approved). Nearest relative cannot be overruled if they object (unlike s.2).",
+      "keyPoints": [
+        "Renewable for a further 6 months, then yearly",
+        "Nearest relative can order discharge (s.23) — but RC can bar (s.25)",
+        "Can apply to Tribunal once per detention period",
+        "Nearest relative can apply if RC bars discharge (s.25)",
+        "Triggers s.117 aftercare entitlement on discharge",
+        "IMHA entitlement applies",
+        "AMHP must consult nearest relative and cannot proceed if NR objects (unless displaced)"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.4",
+      "title": "Emergency Admission for Assessment",
+      "category": "detention",
+      "duration": "Up to 72 hours",
+      "renewable": false,
+      "purpose": "Emergency admission where s.2 cannot be arranged urgently. Short-term bridge only.",
+      "whoApplies": "AMHP (or nearest relative) + 1 doctor (does not need to be s.12 approved)",
+      "keyPoints": [
+        "Used only when s.2 urgently necessary and 2 doctors cannot attend",
+        "Should be converted to s.2 or s.3 within 72 hours",
+        "No Tribunal right for s.4 itself (only after conversion)",
+        "Rarely used in practice"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.5(2)",
+      "title": "Doctor's Holding Power",
+      "category": "detention",
+      "duration": "Up to 72 hours",
+      "renewable": false,
+      "purpose": "Emergency power to detain an informal inpatient while a formal assessment is arranged.",
+      "whoApplies": "Doctor in charge of patient's treatment (or nominated deputy)",
+      "keyPoints": [
+        "Only applies to patients already admitted as informal inpatients",
+        "Triggers formal MHA assessment within 72 hours",
+        "Cannot be renewed",
+        "Does not allow treatment without consent",
+        "Must be reported on Form H4"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.5(4)",
+      "title": "Nurse's Holding Power",
+      "category": "detention",
+      "duration": "Up to 6 hours",
+      "renewable": false,
+      "purpose": "Allows a qualified mental health nurse to detain an informal patient for up to 6 hours when a doctor cannot attend immediately.",
+      "whoApplies": "Qualified mental health nurse (RMN) — no doctor required",
+      "keyPoints": [
+        "Only for informal inpatients",
+        "Ends when doctor arrives and assesses, or after 6 hours",
+        "Nurse must record on Form H5",
+        "Does not authorise treatment",
+        "Doctor should then apply s.5(2) or formal section if needed"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.17",
+      "title": "Leave of Absence",
+      "category": "community",
+      "duration": "As authorised by RC",
+      "renewable": false,
+      "purpose": "Grants a detained patient permission to leave hospital. Leave conditions are set by the RC.",
+      "whoApplies": "Granted by Responsible Clinician only",
+      "keyPoints": [
+        "RC sets conditions (escorted/unescorted, destination, duration)",
+        "Can be recalled from leave at any time",
+        "Leave > 7 days triggers CTO consideration",
+        "Extended s.17 leave (over 7 days) requires CTO unless on s.17 leave",
+        "Leave can be cancelled by RC at any time"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.17A",
+      "title": "Community Treatment Order (CTO)",
+      "category": "community",
+      "duration": "6 months (renewable)",
+      "renewable": true,
+      "purpose": "Allows a patient to live in the community under conditions, with power of recall to hospital.",
+      "whoApplies": "RC makes the order with AMHP agreement",
+      "keyPoints": [
+        "Patient must have been detained under s.3 (or equivalent)",
+        "Conditions set by RC — e.g., residence, medication, attendance",
+        "Can be recalled to hospital if conditions breached or risk increases",
+        "Nearest relative can discharge from CTO (subject to barring)",
+        "Tribunal right applies",
+        "IMHA entitlement applies"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.18",
+      "title": "Return of Absent Without Leave (AWOL)",
+      "category": "detention",
+      "duration": "N/A — return power",
+      "renewable": false,
+      "purpose": "Authorises the return to hospital of a detained patient who has absconded.",
+      "whoApplies": "Any authorised member of hospital staff, police, or AMHP",
+      "keyPoints": [
+        "Applies when patient leaves without authorisation or fails to return from leave",
+        "Police can enter premises to return AWOL patient",
+        "AWOL period does not count towards detention duration",
+        "If AWOL for 28+ days, detention may lapse (time limits apply)"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.23",
+      "title": "Discharge",
+      "category": "discharge",
+      "duration": "N/A — discharge power",
+      "renewable": false,
+      "purpose": "Power to discharge a detained patient. Can be exercised by RC, Hospital Managers, or Nearest Relative.",
+      "whoApplies": "RC / Hospital Managers / Nearest Relative",
+      "keyPoints": [
+        "Nearest Relative must give 72 hours written notice (to allow s.25 barring)",
+        "RC can immediately discharge without notice",
+        "Hospital Managers can discharge after a hearing",
+        "Nearest Relative discharge cannot be unreasonably withheld",
+        "Use s.23(2)(a) — Nearest Relative written notice to Hospital Managers"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.25",
+      "title": "Report Barring Discharge by Nearest Relative",
+      "category": "discharge",
+      "duration": "6 months (barring period)",
+      "renewable": false,
+      "purpose": "RC can file a report preventing the nearest relative from discharging the patient for 6 months.",
+      "whoApplies": "Responsible Clinician (within 72 hours of NR discharge notice)",
+      "keyPoints": [
+        "RC must believe patient would be dangerous to self or others if discharged",
+        "RC has 72 hours from NR notice to file a s.25 report",
+        "If barred, nearest relative can apply to Mental Health Tribunal",
+        "Barring period is 6 months (cannot give another s.23 notice during this period)",
+        "Hospital Managers receive the s.25 report — recorded on Form H6"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.47/s.48",
+      "title": "Transfer from Prison",
+      "category": "detention",
+      "duration": "Duration of sentence / remand",
+      "renewable": false,
+      "purpose": "s.47: Transfer of sentenced prisoner to hospital. s.48: Transfer of remand prisoner to hospital.",
+      "whoApplies": "Secretary of State for Justice (on recommendation of 2 doctors)",
+      "keyPoints": [
+        "s.47 — sentenced prisoners transferred for treatment",
+        "s.48 — remand prisoners (used for more urgent cases)",
+        "Often paired with a restriction order (s.49)",
+        "Patient retains prisoner legal status",
+        "Tribunal rights apply"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.58",
+      "title": "Treatment Requiring Consent or Second Opinion",
+      "category": "rights",
+      "duration": "N/A — treatment safeguard",
+      "renewable": false,
+      "purpose": "Protects patients from certain treatments (especially long-term medication) without consent or independent doctor review.",
+      "whoApplies": "Applies after 3 months of treatment under detention",
+      "keyPoints": [
+        "After 3 months, RC must certify patient consents OR obtain SOAD certificate",
+        "SOAD (Second Opinion Appointed Doctor) appointed by CQC",
+        "SOAD independently reviews whether treatment is appropriate",
+        "Applies to medication — not ECT (see s.58A)",
+        "Patient can withdraw consent at any time"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.58A",
+      "title": "Electro-convulsive Therapy (ECT)",
+      "category": "rights",
+      "duration": "N/A — treatment safeguard",
+      "renewable": false,
+      "purpose": "Special safeguards for ECT — stricter than s.58. Requires consent or SOAD certificate.",
+      "whoApplies": "Any detained patient (no 3-month period)",
+      "keyPoints": [
+        "ECT cannot be given without consent if patient has capacity",
+        "If patient lacks capacity, SOAD must certify it does not conflict with advance decision or attorney",
+        "Stricter than s.58 — applies immediately, not after 3 months"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.117",
+      "title": "After-care",
+      "category": "rights",
+      "duration": "Until no longer needed",
+      "renewable": false,
+      "purpose": "Duty on NHS and local authority to provide after-care for patients discharged from s.3 (and equivalents). FREE — cannot be charged for.",
+      "whoApplies": "NHS and Local Authority jointly responsible",
+      "keyPoints": [
+        "Applies on discharge from s.3, s.37, s.47, s.48 (and equivalents)",
+        "Services are FREE — local authority cannot charge for s.117 services",
+        "Continues until both NHS and LA agree it is no longer needed",
+        "Covers housing, support, mental health services, medication",
+        "Joint planning required before discharge"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.130A",
+      "title": "Independent Mental Health Advocate (IMHA)",
+      "category": "rights",
+      "duration": "Duration of detention",
+      "renewable": false,
+      "purpose": "Statutory right to an independent advocate for detained patients and those on CTOs.",
+      "whoApplies": "Free service — available to all qualifying patients",
+      "keyPoints": [
+        "Entitlement under ss.130A–130D MHA (inserted by MHA 2007)",
+        "IMHA can attend meetings, review records, help patient understand rights",
+        "Must be told about this right on admission (s.132)",
+        "To access: ask ward staff for referral to IMHA service",
+        "Completely independent of the hospital trust"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.132",
+      "title": "Duty to Give Information",
+      "category": "rights",
+      "duration": "N/A — notification duty",
+      "renewable": false,
+      "purpose": "Hospital must tell you about your rights when you are detained. This includes Tribunal rights, IMHA, and how to get help.",
+      "whoApplies": "Hospital (duty on managers)",
+      "keyPoints": [
+        "Must be given as soon as practicable after detention",
+        "Must be given verbally AND in writing",
+        "Covers: reason for detention, Tribunal rights, IMHA, consent to treatment, discharge",
+        "Failure to provide rights information is a legal breach",
+        "Information must be in appropriate language/format"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.135",
+      "title": "Warrant to Enter Premises",
+      "category": "police",
+      "duration": "Single use",
+      "renewable": false,
+      "purpose": "Allows police to enter premises (with AMHP and doctor) to remove a person believed to have a mental disorder.",
+      "whoApplies": "Police (with magistrate warrant, applied for by AMHP)",
+      "keyPoints": [
+        "Magistrate issues warrant on AMHP application",
+        "Police enter with AMHP and doctor present",
+        "Person can be removed to a place of safety",
+        "Used when access is refused or person is alone and unable to care for self"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.136",
+      "title": "Police Power: Place of Safety",
+      "category": "police",
+      "duration": "Up to 24 hours (extendable to 36 hours)",
+      "renewable": false,
+      "purpose": "Police can detain someone in a public place who appears to have a mental disorder, for assessment at a place of safety.",
+      "whoApplies": "Police constable — no warrant or doctor needed",
+      "keyPoints": [
+        "Only applies in public places",
+        "Person taken to designated place of safety (usually hospital or suite)",
+        "Must be assessed by doctor and AMHP within the period",
+        "Maximum 24 hours — extendable by 12 hours if doctor certifies",
+        "Not a formal detention — no Tribunal right",
+        "Custody suite rarely used now — hospital preferred"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.26",
+      "title": "Definition of Nearest Relative",
+      "category": "rights",
+      "duration": null,
+      "renewable": false,
+      "purpose": "Defines who counts as a patient's 'Nearest Relative' (NR) — the person with statutory powers to discharge, object to admission, and apply to the Tribunal.",
+      "whoApplies": "Applies automatically to all detained patients — no application needed.",
+      "keyPoints": [
+        "Hierarchy (highest priority first): spouse/civil partner or cohabitee (6+ months); child; parent; sibling; grandparent; grandchild; uncle/aunt; nephew/niece; other relative",
+        "Cohabiting partner of 6+ months ranks equal to spouse (and above all others if no spouse)",
+        "Oldest person in a tie takes priority",
+        "Patient can nominate someone else to act as NR — but this is not legally binding",
+        "If NR is under 18, moves abroad, or is themselves a patient, they are passed over",
+        "Estranged nearest relatives still count unless displaced by a court (s.29)"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.29",
+      "title": "Displacement of Nearest Relative",
+      "category": "discharge",
+      "duration": null,
+      "renewable": false,
+      "purpose": "Allows a court to appoint a different person to act as Nearest Relative if the existing NR is unsuitable, unreasonably objects to discharge, or has abandoned the patient.",
+      "whoApplies": "Application to County Court by: AMHP, any relative, anyone the patient lives with, or a local authority.",
+      "keyPoints": [
+        "Grounds for displacement: NR is incapable of acting; NR has unreasonably objected to a s.3 application; NR would exercise discharge power without due regard to patient's welfare or the public interest; NR has abandoned the patient",
+        "Court appoints an 'Acting Nearest Relative' — usually the AMHP or another relative",
+        "Process takes weeks — not suitable if urgent discharge is needed",
+        "Patient themselves can ask the AMHP to apply for NR displacement",
+        "If NR was barred from discharging (s.25), they may still be displaced if the barring reveals unreasonableness",
+        "A displaced NR loses all MHA powers until the court restores them"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.66",
+      "title": "Applications to the Mental Health Tribunal",
+      "category": "discharge",
+      "duration": null,
+      "renewable": false,
+      "purpose": "Sets out who can apply to the First-tier Tribunal (Mental Health) and the strict time windows within which applications must be made.",
+      "whoApplies": "Patient, Nearest Relative (in limited circumstances), or via automatic referral (s.68).",
+      "keyPoints": [
+        "s.2 patient: must apply within 14 days of detention. One application only.",
+        "s.3 patient: one application per detention period (6 months or 12 months at renewal)",
+        "CTO patient: one application per CTO period",
+        "Nearest Relative barred from discharge (s.25): NR can apply to Tribunal within 28 days of the barring report",
+        "If a patient has not applied, hospital must refer automatically under s.68",
+        "Missing the window is fatal — you cannot apply outside it (for that period)",
+        "Application is free; legal aid is automatically available for the hearing"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.68",
+      "title": "Automatic Referral to Tribunal",
+      "category": "rights",
+      "duration": null,
+      "renewable": false,
+      "purpose": "Requires the hospital to automatically refer a patient to the Tribunal if the patient has not exercised their right to apply — a safety net to ensure every patient gets Tribunal review.",
+      "whoApplies": "Hospital Managers must refer. No action needed by the patient.",
+      "keyPoints": [
+        "s.2: automatic referral if patient has not applied within 14 days",
+        "s.3: automatic referral after 6 months in hospital without a Tribunal (if not referred or heard)",
+        "s.3 renewal: automatic referral each time the section is renewed if no Tribunal in 3 years",
+        "CTO: automatic referral if no Tribunal within 6 months of CTO",
+        "This right cannot be waived or blocked by the hospital",
+        "Even without legal aid or a solicitor, the hospital must make this referral"
+      ],
+      "highlight": false
+    },
+    {
+      "section": "s.72",
+      "title": "Tribunal Powers: The Discharge Test",
+      "category": "discharge",
+      "duration": null,
+      "renewable": false,
+      "purpose": "Sets out the legal test the Tribunal applies to decide whether to discharge — and critically, the burden of proof is on the HOSPITAL to justify continued detention, NOT on the patient to prove they should be released.",
+      "whoApplies": "Applied by First-tier Tribunal (Mental Health) at every hearing.",
+      "keyPoints": [
+        "BURDEN OF PROOF: The hospital must prove continued detention is justified. The patient does not have to prove they should be free.",
+        "The Tribunal MUST discharge if it cannot be satisfied that: (a) the patient is suffering from mental disorder of a nature or degree which makes detention appropriate; AND (b) detention is necessary for the patient's health or safety or protection of others; AND (c) appropriate treatment is available",
+        "For s.2: also must be satisfied the admission is justified for assessment",
+        "Tribunal CAN (but need not) discharge if criteria are met but circumstances otherwise justify it",
+        "Tribunal can order: absolute discharge; conditional discharge (with conditions); deferred discharge (discharge on a future date); recommendation for leave, transfer, or supervised discharge",
+        "Conditional discharge: patient released with conditions (e.g., medication, supervision) — breach allows recall to hospital",
+        "If ANY ONE of the three criteria cannot be proven by the hospital, the Tribunal must discharge"
+      ],
+      "highlight": true
+    },
+    {
+      "section": "s.73",
+      "title": "Restricted Patient Discharge (s.37/41)",
+      "category": "discharge",
+      "duration": null,
+      "renewable": false,
+      "purpose": "Sets out the discharge rules for patients subject to a restriction order (s.41) — a completely different pathway requiring Ministry of Justice involvement.",
+      "whoApplies": "Applies to patients admitted under s.37 hospital order with a s.41 restriction order (almost always forensic/criminal justice patients).",
+      "keyPoints": [
+        "Tribunal can grant CONDITIONAL discharge — patient released but under supervision conditions",
+        "Tribunal can grant ABSOLUTE discharge — patient fully free, but only if the Tribunal is satisfied no conditions are needed",
+        "Absolute discharge very rare — usually given only after a conditional discharge period has been successful",
+        "The Secretary of State (Ministry of Justice) can independently grant conditional or absolute discharge at any time",
+        "The MoJ can grant supervised leave (s.17) as a step toward discharge — progress through leave is essential",
+        "Conditional discharge can be recalled if conditions are breached or risk increases — recalled directly to hospital",
+        "Restricted patients must apply to Tribunal annually; automatic referral applies if no hearing in 3 years"
+      ],
+      "highlight": false
+    }
+  ],
+  "letterTemplate": {
+    "id": "s23-nearest-relative-discharge",
+    "title": "Section 23 Nearest Relative Discharge Notice",
+    "legalBasis": "Mental Health Act 1983, s.23(2)(a)",
+    "citation": "Mental Health Act 1983, c.20, ss.23, 25. Available at: https://www.legislation.gov.uk/ukpga/1983/20/section/23 (Accessed: 27 February 2026).",
+    "citationUrl": "https://www.legislation.gov.uk/ukpga/1983/20/section/23",
+    "fields": [
+      {
+        "id": "mumName",
+        "label": "Nearest relative's full name",
+        "placeholder": "e.g. Jane Smith",
+        "type": "text",
+        "required": true,
+        "hint": "The person writing the letter (nearest relative)"
+      },
+      {
+        "id": "mumAddress",
+        "label": "Nearest relative's address",
+        "placeholder": "1 Example Street\nCity\nPostcode",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "Date of letter",
+        "placeholder": "",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "hospitalName",
+        "label": "Hospital name",
+        "placeholder": "e.g. St. Elsewhere NHS Foundation Trust",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "hospitalAddress",
+        "label": "Hospital address",
+        "placeholder": "Hospital Road\nCity\nPostcode",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "id": "patientName",
+        "label": "Patient's full name",
+        "placeholder": "e.g. Alex Smith",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "patientDOB",
+        "label": "Patient's date of birth",
+        "placeholder": "",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "wardName",
+        "label": "Ward name (if known)",
+        "placeholder": "e.g. Alder Ward",
+        "type": "text",
+        "required": false,
+        "hint": "Leave blank if unknown"
+      },
+      {
+        "id": "mumPhone",
+        "label": "Nearest relative's contact telephone",
+        "placeholder": "07700 900000",
+        "type": "text",
+        "required": true
+      }
+    ],
+    "templateLines": [
+      "{{mumName}}",
+      "{{mumAddress}}",
+      "",
+      "{{date}}",
+      "",
+      "To: The Hospital Managers",
+      "{{hospitalName}}",
+      "{{hospitalAddress}}",
+      "",
+      "Re: Notice of Discharge under Section 23 of the Mental Health Act 1983",
+      "Patient: {{patientName}}",
+      "Date of birth: {{patientDOB}}",
+      "Ward: {{wardName}}",
+      "",
+      "Dear Sir/Madam,",
+      "",
+      "I am writing in my capacity as the nearest relative of the above-named patient, who is currently detained under Section 3 of the Mental Health Act 1983.",
+      "",
+      "In accordance with my rights under Section 23(2)(a) of the Mental Health Act 1983, I hereby give written notice that I am ordering the discharge of the patient from detention. I understand that this notice provides for a period of 72 hours during which the responsible clinician may, if appropriate, furnish a report under Section 25 barring the discharge.",
+      "",
+      "I believe that the criteria for continued detention under Section 3 are no longer met, and that my relative can be appropriately supported in the community. I respectfully request that this notice be acknowledged in writing and that I am informed of any decision made by the responsible clinician in response.",
+      "",
+      "Please do not hesitate to contact me should you require any further information.",
+      "",
+      "Yours faithfully,",
+      "",
+      "",
+      "________________________________",
+      "{{mumName}}",
+      "{{mumPhone}}",
+      "",
+      "---",
+      "Harvard reference:",
+      "Mental Health Act 1983, c.20, ss.23, 25. Available at: https://www.legislation.gov.uk/ukpga/1983/20/section/23 (Accessed: 27 February 2026)."
+    ]
+  },
+  "rights": [
+    {
+      "id": "imha",
+      "title": "Independent Mental Health Advocate (IMHA)",
+      "priority": "essential",
+      "summary": "You have a legal right to a FREE, independent advocate under s.130A MHA 1983.",
+      "detail": "An IMHA is completely independent of the hospital. They can attend ward round meetings with you, help you understand your rights, assist you in communicating your views, and support you in challenging your detention. This right applies the moment you are detained under s.2 or s.3.",
+      "howToExercise": "Ask any ward staff member to refer you to the IMHA service. This cannot be refused. You can also search for your local IMHA provider online.",
+      "legalBasis": "Mental Health Act 1983, ss.130A–130D (inserted by Mental Health Act 2007, s.30)",
+      "appliesTo": [
+        "s.2",
+        "s.3",
+        "s.4",
+        "CTO",
+        "Guardianship"
+      ]
+    },
+    {
+      "id": "tribunal",
+      "title": "Right to Apply to a Mental Health Tribunal",
+      "priority": "essential",
+      "summary": "You can apply to an independent judicial tribunal that has the power to order your release.",
+      "detail": "The Mental Health Tribunal is a judicial body — completely independent of the NHS. It includes a judge, a consultant psychiatrist, and a lay member. It can order your discharge even if the RC disagrees. Under s.3, you can apply once in the first 6 months of detention. Your nearest relative can also apply if the RC has barred their discharge notice (s.25).",
+      "howToExercise": "Contact the Tribunal Service directly, or ask your solicitor or IMHA to make the application on your behalf. Legal aid is available for Tribunal hearings.",
+      "legalBasis": "Mental Health Act 1983, ss.66, 72, 73",
+      "appliesTo": [
+        "s.2 (within 14 days)",
+        "s.3 (once per period)",
+        "CTO",
+        "s.37"
+      ]
+    },
+    {
+      "id": "nearest-relative",
+      "title": "Nearest Relative's Right to Discharge (s.23)",
+      "priority": "essential",
+      "summary": "Your nearest relative can write to the Hospital Managers ordering your discharge from s.3 detention.",
+      "detail": "Under s.23(2)(a), the nearest relative can give written notice to the Hospital Managers ordering discharge. The hospital then has 72 hours in which the RC can file a s.25 barring report. If no barring report is filed within 72 hours, you must be discharged. If the RC does bar the discharge, the nearest relative can apply to the Mental Health Tribunal.",
+      "howToExercise": "Nearest relative sends a signed written letter to the Hospital Managers / MHA Administration office. Keep a copy and send recorded delivery. The 72-hour clock starts on receipt.",
+      "legalBasis": "Mental Health Act 1983, s.23(2)(a)",
+      "appliesTo": [
+        "s.3",
+        "CTO"
+      ]
+    },
+    {
+      "id": "hospital-managers",
+      "title": "Hospital Managers' Hearing",
+      "priority": "important",
+      "summary": "You can request a hearing before the Hospital Managers Panel — an independent panel that can discharge you.",
+      "detail": "Hospital Managers are lay people (non-clinical, non-executive) who hold delegated power to discharge detained patients under s.23. You can request a hearing at any time, and one must be offered when your detention is renewed. The panel reviews your case and can order discharge even if the RC disagrees.",
+      "howToExercise": "Write to the MHA Administration Office requesting a Hospital Managers Hearing. You are entitled to bring a solicitor or advocate.",
+      "legalBasis": "Mental Health Act 1983, s.23(2)(b); Code of Practice ch.38",
+      "appliesTo": [
+        "s.2",
+        "s.3",
+        "CTO"
+      ]
+    },
+    {
+      "id": "section-132",
+      "title": "Right to Be Told Your Rights (s.132)",
+      "priority": "essential",
+      "summary": "The hospital MUST tell you about your rights as soon as practicable after detention — verbally and in writing.",
+      "detail": "Under s.132, the hospital has a duty to explain to you: why you are detained, your right to apply to the Tribunal, your right to an IMHA, how treatment can be given, how to make a complaint, and how to contact a solicitor. If you were not given this information, this is a breach of the MHA.",
+      "howToExercise": "If you were not given this information, raise it with your IMHA or solicitor. It can be relevant in Tribunal proceedings.",
+      "legalBasis": "Mental Health Act 1983, s.132",
+      "appliesTo": [
+        "s.2",
+        "s.3",
+        "s.4",
+        "CTO"
+      ]
+    },
+    {
+      "id": "s117-aftercare",
+      "title": "Free After-care (s.117)",
+      "priority": "essential",
+      "summary": "After discharge from s.3, you are entitled to FREE after-care services jointly funded by the NHS and local authority.",
+      "detail": "Under s.117, the NHS and local authority have a joint duty to provide after-care to patients discharged from s.3 (and equivalents) until they are satisfied the services are no longer needed. Critically, this is FREE — the local authority cannot charge for s.117 services (confirmed by the House of Lords in R v Manchester City Council ex p Stennett). This covers mental health support, housing assistance, and community services.",
+      "howToExercise": "A s.117 aftercare meeting should be held before discharge. If not arranged, raise it with the social worker or IMHA. Challenge any attempt to charge for s.117 services.",
+      "legalBasis": "Mental Health Act 1983, s.117; R v Manchester CC ex p Stennett [2002] UKHL 34",
+      "appliesTo": [
+        "s.3",
+        "s.37",
+        "s.47",
+        "s.48"
+      ]
+    },
+    {
+      "id": "consent-to-treatment",
+      "title": "Right to Refuse Treatment (s.58 / s.58A)",
+      "priority": "important",
+      "summary": "After 3 months, medication requires your consent OR an independent SOAD certificate. ECT always requires consent if you have capacity.",
+      "detail": "For the first 3 months of detention, medication can be given without consent under the MHA. After 3 months, the RC must either certify that you consent, or obtain a Second Opinion Appointed Doctor (SOAD) certificate from the CQC. For ECT (electroconvulsive therapy), consent is always required if you have capacity — there is no 3-month period.",
+      "howToExercise": "Tell your RC or named nurse that you withdraw consent. For ECT, clearly state your refusal. Seek IMHA support if needed.",
+      "legalBasis": "Mental Health Act 1983, ss.58, 58A",
+      "appliesTo": [
+        "s.3",
+        "s.2 (treatment aspects)"
+      ]
+    },
+    {
+      "id": "capacity",
+      "title": "Mental Capacity Rights (MCA 2005)",
+      "priority": "important",
+      "summary": "Detention under the MHA does not remove your mental capacity. You still have rights under the Mental Capacity Act 2005.",
+      "detail": "Mental capacity is decision-specific. You may have capacity to make some decisions but not others. The MCA presumes you have capacity unless proven otherwise. Any decision made on your behalf must be in your best interests, using the least restrictive option. You can make an Advance Decision to Refuse Treatment (ADRT) which is legally binding even under detention (for physical health decisions).",
+      "howToExercise": "If you believe a capacity assessment has been done incorrectly, challenge it. Ask for an IMHA or IMCA (Independent Mental Capacity Advocate) if applicable.",
+      "legalBasis": "Mental Capacity Act 2005, ss.1–4; Code of Practice",
+      "appliesTo": [
+        "All detained patients"
+      ]
+    },
+    {
+      "id": "complaints",
+      "title": "Right to Complain",
+      "priority": "useful",
+      "summary": "You can complain about your treatment. Multiple routes exist: PALS, formal NHS complaint, CQC, and the Parliamentary Ombudsman.",
+      "detail": "PALS (Patient Advice and Liaison Service) handles informal concerns. Formal complaints go to the trust's complaints manager. If unsatisfied, escalate to the Parliamentary and Health Service Ombudsman. The CQC inspects mental health services and you can report concerns to them. These complaints can be made by you, family, or your IMHA.",
+      "howToExercise": "Ask ward staff for PALS contact details. Formal complaints must be acknowledged within 3 working days and responded to within 25 working days.",
+      "legalBasis": "NHS Complaints Regulations 2009; CQC: Health and Social Care Act 2008",
+      "appliesTo": [
+        "All patients"
+      ]
+    },
+    {
+      "id": "solicitor",
+      "title": "Right to Legal Representation",
+      "priority": "important",
+      "summary": "You have the right to consult a solicitor in private. Legal aid is available for Mental Health Tribunal cases.",
+      "detail": "You can see a solicitor in private at any time — this cannot be restricted. Legal aid (public funding) is available for Mental Health Tribunal representation. Your IMHA or a ward nurse can help you contact a mental health law solicitor. The Law Society has a specialist mental health panel of accredited solicitors.",
+      "howToExercise": "Ask ward staff for a private phone to call a solicitor. Search the Law Society's mental health panel directory. Your IMHA can help arrange this.",
+      "legalBasis": "Mental Health Act 1983, s.134(3); Legal Aid, Sentencing and Punishment of Offenders Act 2012",
+      "appliesTo": [
+        "All detained patients"
+      ]
+    },
+    {
+      "id": "records-access",
+      "title": "Right to Access Your Medical Records (Subject Access Request)",
+      "priority": "important",
+      "summary": "You can request a copy of ALL your medical records held by the NHS trust — including previous admission notes, risk assessments, RC reports, and any documents that will be presented to the Tribunal.",
+      "detail": "Under UK GDPR (Art.15) you have the right to a copy of all personal data held about you. This includes ward observation logs, risk assessments, previous section documents, and any clinical records that will be used in Tribunal proceedings. The trust must respond within ONE MONTH. You can also request that inaccurate information be corrected under Art.16. Knowing what is in your records before a Tribunal is a strategic advantage — your solicitor will need this too.",
+      "howToExercise": "Write to the Trust's Data Protection / Medical Records department by email or recorded letter with: your name, DOB, NHS number, ward, and what you want. Request both current and historical records. Say it is a Subject Access Request under UK GDPR Art.15. It is FREE. If refused or delayed, complain to the ICO (ico.org.uk).",
+      "legalBasis": "UK General Data Protection Regulation, Art.15 (right of access), Art.16 (right to rectification); Data Protection Act 2018",
+      "appliesTo": [
+        "All detained patients",
+        "Also voluntary patients"
+      ]
+    },
+    {
+      "id": "challenge-renewal",
+      "title": "Challenge Renewal of Section 3",
+      "priority": "important",
+      "summary": "Every time your s.3 detention is renewed (after 6 months, then annually), a fresh legal test applies — and you have a fresh right to apply to the Tribunal.",
+      "detail": "At renewal, the RC must prepare a renewal report under s.20 and serve it on the Hospital Managers. The Managers must review it and can discharge the patient themselves. More importantly, renewal triggers a new period for Tribunal application. The RC must also inform you of the renewal and your rights. Renewal is NOT automatic — the Managers can refuse to renew. If you have had no Tribunal hearing in the past 3 years, the Managers must also refer you automatically (s.68).",
+      "howToExercise": "When informed of renewal, immediately contact your solicitor and apply to the Tribunal for the new period. Ask the Hospital Managers to review the renewal report themselves. If the RC's renewal report contains inaccuracies, submit a written response to the Managers.",
+      "legalBasis": "Mental Health Act 1983, ss.20, 23(2)(b), 68; Code of Practice ch.30",
+      "appliesTo": [
+        "s.3",
+        "s.37"
+      ]
+    },
+    {
+      "id": "judicial-review",
+      "title": "Judicial Review — Challenging the Lawfulness of Detention",
+      "priority": "useful",
+      "summary": "If the section itself was procedurally unlawful — wrong form, wrong doctor, wrong process — you can challenge the legality of the detention in the High Court.",
+      "detail": "Judicial review is distinct from a Tribunal. The Tribunal asks 'should you be detained now?' — Judicial review asks 'was the detention lawful from the start?' Grounds include: wrong signatories on section papers, AMHP conflict of interest, nearest relative not consulted where required, section forms containing material errors, failure of Hospital Managers to review detention properly. A successful judicial review can result in a writ of habeas corpus (immediate release).",
+      "howToExercise": "Only through a specialist mental health law solicitor. An emergency application (urgent judicial review) can be made in hours if detention is clearly unlawful. Your IMHA can help contact appropriate solicitors. Legal aid is available.",
+      "legalBasis": "Senior Courts Act 1981, s.31; R (von Brandenburg) v East London NHS Foundation Trust [2003] UKHL 58",
+      "appliesTo": [
+        "All detained patients where procedural error exists"
+      ]
+    }
+  ],
+  "dischargeRoutes": [
+    {
+      "id": "tribunal",
+      "rank": 1,
+      "title": "Mental Health Tribunal",
+      "summary": "An independent judicial body with the legal power to order your discharge. The burden of proof is on the hospital — they must prove detention is still justified.",
+      "applies": [
+        "s.2",
+        "s.3",
+        "CTO",
+        "s.37"
+      ],
+      "timeframe": "s.2: hearing within 7 days. s.3 / CTO: hearing within 8 weeks.",
+      "legalBasis": "Mental Health Act 1983, ss.66, 72, 73",
+      "steps": [
+        "Contact a solicitor immediately — legal aid is automatic and free, no means test",
+        "Your solicitor makes a written application to the First-tier Tribunal (Mental Health)",
+        "The Tribunal will obtain reports from your Responsible Clinician and nursing staff",
+        "You (or your solicitor) can submit your own evidence — written statements, letters from family, care plans",
+        "A Tribunal panel of three (judge, doctor, lay member) holds a hearing — usually on the ward",
+        "The hospital must prove that ALL three criteria for detention are CURRENTLY met",
+        "If the hospital cannot satisfy the Tribunal on any one criterion, you MUST be discharged"
+      ],
+      "outcomes": [
+        "Absolute discharge — released immediately",
+        "Conditional discharge — released with conditions (e.g. medication compliance, regular outpatient contact, residence)",
+        "Deferred discharge — discharged on a specified future date or when named conditions are met (e.g. housing arranged)",
+        "Recommendation for leave, transfer to less restrictive setting, or consideration for CTO",
+        "No discharge — but RC report and hearing create valuable evidence for the next application"
+      ],
+      "strengths": [
+        "Legally binding — hospital MUST comply with the order",
+        "Burden of proof is on the hospital, not on you",
+        "Free legal aid — no cost to patient",
+        "Truly independent of the NHS trust",
+        "Can order conditional or deferred discharge when absolute is not yet possible"
+      ],
+      "limitations": [
+        "Takes time — up to 8 weeks for s.3, which can feel like an eternity",
+        "Absolute discharge granted in approximately 10–15% of hearings; conditional/deferred more common",
+        "Can only consider whether criteria are CURRENTLY met — not whether section was initially wrong",
+        "s.2 window is only 14 days — easy to miss"
+      ],
+      "tip": "Apply on day one, even if uncertain. You can withdraw later. Use the preparation time to gather evidence. Ask your IMHA to help compile a personal statement for the panel."
+    },
+    {
+      "id": "managers-hearing",
+      "rank": 2,
+      "title": "Hospital Managers' Hearing",
+      "summary": "An independent panel of non-executive directors who can discharge you even if your clinical team disagrees. Underused and more flexible than the Tribunal.",
+      "applies": [
+        "s.2",
+        "s.3",
+        "CTO"
+      ],
+      "timeframe": "Usually arranged within 2–4 weeks of request.",
+      "legalBasis": "Mental Health Act 1983, s.23(2)(b); Code of Practice ch.38",
+      "steps": [
+        "Write to the MHA Administration Office (or ask ward staff for the form) requesting a Hospital Managers' Hearing",
+        "You do not need a solicitor, but you may bring one — also consider asking your IMHA to attend",
+        "The panel reads reports from your clinical team; you can also submit your own written statement",
+        "The hearing is less formal than a Tribunal — you can speak directly to the panel",
+        "The panel asks the clinical team questions and hears your account",
+        "Panel votes on whether to discharge — a majority is sufficient"
+      ],
+      "outcomes": [
+        "Discharge — legally binding, immediate effect",
+        "No discharge — but you can request another hearing (though not immediately)",
+        "Panel may make recommendations to the clinical team about care planning, leave, or conditions"
+      ],
+      "strengths": [
+        "Can discharge even if the RC actively opposes it",
+        "More informal and accessible than a Tribunal",
+        "You can request one at any time (subject to reasonable frequency)",
+        "Panel members are lay people — often more empathetic to patient perspective",
+        "Useful after a Tribunal has declined discharge — different body, different view"
+      ],
+      "limitations": [
+        "Panels sometimes defer to clinical team opinion in practice",
+        "No legal aid (though you can bring your own solicitor or IMHA)",
+        "Decision reasons do not have to be given in full",
+        "Cannot make conditions — discharge is usually absolute or nothing"
+      ],
+      "tip": "Request a Managers' hearing in writing, and simultaneously apply to the Tribunal. These are separate routes and both can run at the same time."
+    },
+    {
+      "id": "nearest-relative",
+      "rank": 3,
+      "title": "Nearest Relative Discharge (s.23 Notice)",
+      "summary": "Your Nearest Relative can send a written notice ordering the Hospital Managers to discharge you. This starts a 72-hour clock during which the RC can only block it by filing a formal 'barring report'.",
+      "applies": [
+        "s.3",
+        "CTO"
+      ],
+      "timeframe": "Discharge effective after 72 hours unless a s.25 barring report is filed.",
+      "legalBasis": "Mental Health Act 1983, ss.23(2)(a), 25, 26",
+      "steps": [
+        "Identify your Nearest Relative using the s.26 hierarchy (see MHA Sections tab)",
+        "NR sends a signed written notice to the Hospital Managers / MHA Administration office",
+        "Send by recorded delivery and keep a copy — the 72-hour clock starts on receipt",
+        "If no s.25 report is filed by the RC within 72 hours, you are discharged",
+        "If RC files a s.25 report ('dangerous to self or others'), discharge is blocked for 6 months",
+        "After a s.25 barring, your NR can apply to the Tribunal within 28 days"
+      ],
+      "outcomes": [
+        "Discharge if no s.25 barring report filed within 72 hours",
+        "If barred: NR can apply to Tribunal — valuable as NR's application is counted separately to patient's own application",
+        "s.25 bar lasts 6 months — NR cannot give another notice during this period"
+      ],
+      "strengths": [
+        "No hearing needed — can work quickly (72 hours)",
+        "Does not use the patient's own Tribunal allocation",
+        "NR's Tribunal application (after s.25 bar) runs separately to yours",
+        "Useful tactical tool — especially near the end of a section period"
+      ],
+      "limitations": [
+        "Does not apply to s.2 (assessment only) — only s.3 and CTO",
+        "Requires a willing and identified NR (may be complicated if NR is absent or estranged)",
+        "RC often files s.25 within hours if they want to keep you — barring is common for patients who are being managed under s.3",
+        "If barred, the 6-month lockout prevents NR from giving another notice"
+      ],
+      "tip": "Consider the timing carefully. A notice given near an RC review or planned discharge meeting is less likely to trigger a s.25 bar. Ask your solicitor to advise on the optimal moment."
+    },
+    {
+      "id": "clinical-discharge",
+      "rank": 4,
+      "title": "Clinical Discharge by Responsible Clinician",
+      "summary": "Your RC can discharge you at any time. Building a collaborative relationship, demonstrating insight, and having a robust community care plan in place are the core strategies.",
+      "applies": [
+        "s.2",
+        "s.3",
+        "CTO",
+        "All sections"
+      ],
+      "timeframe": "No fixed timeline — depends on clinical progress and care planning.",
+      "legalBasis": "Mental Health Act 1983, s.23(2)(c)",
+      "steps": [
+        "Engage actively with your ward round and care programme approach (CPA) meetings",
+        "Ask your IMHA to advocate for your perspective in clinical meetings",
+        "Work with your social worker to build a concrete community plan: named housing, CPN, medication, crisis line",
+        "Demonstrate insight — not necessarily accepting the diagnosis, but showing understanding of your situation and how to manage",
+        "Discuss a step-down plan: section 17 leave (community leave) → extended leave → CTO → discharge",
+        "Request a clear written care plan with discharge criteria so you know exactly what is expected of you"
+      ],
+      "outcomes": [
+        "Discharge — absolute or conditional (CTO)",
+        "Increased s.17 leave as intermediate step",
+        "Transfer to a less restrictive or closer-to-home ward"
+      ],
+      "strengths": [
+        "Quickest route if clinical team agrees",
+        "Not confrontational — preserves therapeutic relationship",
+        "RC can discharge at any time, even before a Tribunal date",
+        "Community leave (s.17) can provide meaningful freedom while formal discharge is prepared"
+      ],
+      "limitations": [
+        "Entirely dependent on clinical team's view — RC may be resistant",
+        "Can feel slow and uncertain without clear milestones",
+        "Patients perceived as lacking insight or refusing treatment face significant barriers"
+      ],
+      "tip": "Ask for written discharge criteria in your care plan. If the team cannot articulate what would lead to discharge, that itself is a problem worth raising at the Tribunal."
+    },
+    {
+      "id": "cto-stepdown",
+      "rank": 5,
+      "title": "Community Treatment Order (CTO) as a Step Down",
+      "summary": "A CTO is not full discharge, but it moves you from 24-hour inpatient detention into the community — with conditions. It is a meaningful step toward freedom and a platform from which to seek absolute discharge.",
+      "applies": [
+        "s.3",
+        "s.37"
+      ],
+      "timeframe": "CTO lasts 6 months initially, renewable. Can be used at any stage of s.3.",
+      "legalBasis": "Mental Health Act 1983, ss.17A–17G",
+      "steps": [
+        "Ask your RC and AMHP to consider a CTO at your next ward round",
+        "CTO conditions must be individually justified — challenge any conditions that seem excessive",
+        "Once on CTO, continue engaging with community services and keep all appointments",
+        "Apply to the Tribunal during the CTO period (you have a right to apply once per CTO period)",
+        "If you comply with all conditions and remain stable, petition the RC to revoke the CTO and discharge you absolutely",
+        "Conditions can be varied or removed over time — ask for a review"
+      ],
+      "outcomes": [
+        "Community living with conditions",
+        "Path toward absolute discharge if CTO period is stable",
+        "Tribunal can discharge from CTO (with or without conditions)"
+      ],
+      "strengths": [
+        "Immediate practical improvement — you are no longer an inpatient",
+        "Preserves family relationships and employment",
+        "Shows tribunal and clinical team you can manage in the community",
+        "Conditions can be gradually reduced toward absolute discharge"
+      ],
+      "limitations": [
+        "Not true freedom — recall to hospital if conditions breached",
+        "Some conditions can feel intrusive (e.g. random home visits, depot injections)",
+        "Recall is quick and does not require a full assessment — can feel precarious"
+      ],
+      "tip": "CTO conditions must be necessary and proportionate to the risks. If a condition seems disproportionate, challenge it via the Tribunal or ask the AMHP to vary it."
+    },
+    {
+      "id": "judicial-review",
+      "rank": 6,
+      "title": "Judicial Review / Habeas Corpus",
+      "summary": "If the section itself was procedurally unlawful — wrong forms, wrong doctors, wrong process — the High Court can declare the detention unlawful and order immediate release.",
+      "applies": [
+        "All sections where procedural error exists"
+      ],
+      "timeframe": "Emergency application can be heard within hours. Standard JR: weeks.",
+      "legalBasis": "Senior Courts Act 1981, s.31; MHA 1983 (procedural requirements)",
+      "steps": [
+        "Contact a specialist mental health law solicitor immediately",
+        "Solicitor checks the section papers for procedural errors: wrong form, missing signatures, wrong doctor status, AMHP conflicts of interest, NR not consulted where required",
+        "If an error is found, solicitor applies for judicial review (or habeas corpus for immediate release)",
+        "An emergency application can be heard the same day if detention is obviously unlawful",
+        "If JR succeeds, the court quashes the section and orders release — or the hospital may concede and discharge"
+      ],
+      "outcomes": [
+        "Writ of habeas corpus — immediate release if detention is unlawful",
+        "Quashing of the section — further detention requires a fresh, valid section",
+        "Compensation claims possible if unlawful detention proven"
+      ],
+      "strengths": [
+        "Can succeed regardless of your mental state — procedural errors are black-and-white",
+        "Emergency applications move extremely fast",
+        "Hospital often concedes and discharges rather than defend a clearly flawed section"
+      ],
+      "limitations": [
+        "Requires a specific procedural error — not available simply because you disagree with the section",
+        "Requires specialist legal expertise",
+        "Successful JR does not prevent re-sectioning if clinical grounds still exist"
+      ],
+      "tip": "Always have a solicitor check the section paperwork immediately on admission. Errors are more common than people realise — AMHP qualification, doctor independence, form completion, and NR consultation are the most frequent problem areas."
+    }
+  ],
+  "patientCircumstances": [
+    {
+      "id": "previous-sections",
+      "title": "Previous Detentions or Hospital Admissions",
+      "shortLabel": "Previous sections",
+      "impact": "challenging",
+      "description": "A history of previous detentions creates a documented pattern that RCs and Tribunal panels use to argue that the illness is chronic and that discharge risks relapse. The more previous admissions, the harder the argument becomes — but it is not insurmountable.",
+      "strategies": [
+        {
+          "action": "Document exactly what is different this time",
+          "detail": "Be specific: what circumstances caused the previous admissions? Are those circumstances now resolved? Has your social support changed? Do not rely on vague statements like 'I am better now' — the Tribunal wants concrete, specific evidence of changed circumstances."
+        },
+        {
+          "action": "Get your Subject Access Records before the Tribunal",
+          "detail": "Request your full medical records (SAR) immediately. Inaccurate or outdated information in previous reports can seriously harm your case. If records contain errors, formally request correction under UK GDPR Art.16 and raise the inaccuracies in your Tribunal statement."
+        },
+        {
+          "action": "Highlight periods of stability between admissions",
+          "detail": "A 'revolving door' pattern looks different if there were long periods of stable community living. If you lived in the community for 2+ years between admissions, document this with evidence (GP letters, housing, employment)."
+        },
+        {
+          "action": "Develop a detailed relapse prevention plan",
+          "detail": "Work with your care team (or independently with your IMHA) to create a written relapse prevention plan that names specific early warning signs, who to contact, and what action to take. Present this to the Tribunal."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge"
+      ],
+      "watchOut": "RC reports in Tribunal proceedings almost always describe previous admissions extensively. Your solicitor should specifically address each previous admission in their submissions — not ignore them."
+    },
+    {
+      "id": "violence-history",
+      "title": "History of Violence or Aggression on Records",
+      "shortLabel": "Violence/risk history",
+      "impact": "very-challenging",
+      "description": "Documented incidents of violence, assault, or threatening behaviour are the single most significant factor in Tribunal decisions. The 'danger to others' limb of the discharge test weighs heavily on any such history. This does not make discharge impossible, but it requires careful preparation.",
+      "strategies": [
+        {
+          "action": "Obtain and analyse the specific incident documentation",
+          "detail": "Request the incident reports via SAR. Understand exactly what is documented, when it occurred, what the context was, and whether the records are accurate. Challenge inaccuracies formally in writing before the Tribunal."
+        },
+        {
+          "action": "Contextualise incidents relative to current mental state",
+          "detail": "Incidents that occurred during acute psychosis or at a time of untreated illness are very different from incidents now. Your solicitor can argue that with treatment and insight, the specific risk factors that caused previous incidents are no longer present."
+        },
+        {
+          "action": "Commission an independent risk assessment",
+          "detail": "Your solicitor can arrange for an independent forensic psychologist or psychiatrist to conduct a risk assessment. An independent view that risk is manageable in the community can directly counter the RC's risk assessment."
+        },
+        {
+          "action": "Build a community risk management plan",
+          "detail": "Create a concrete plan: named CPN, weekly appointments, crisis numbers, named individuals who will monitor warning signs, and what those signs are. A robust plan reassures the Tribunal that risk can be managed outside hospital."
+        },
+        {
+          "action": "Evidence of therapeutic work on the incident",
+          "detail": "Have you completed any anger management, dialectical behaviour therapy, or victim empathy work? Evidence of this significantly shifts the Tribunal's view of future risk."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge",
+        "nearest-relative"
+      ],
+      "watchOut": "Attempting to minimise or deny historical incidents reads very badly to Tribunal panels. Acknowledging what happened while explaining the context and what has changed is a far more effective strategy."
+    },
+    {
+      "id": "non-compliance",
+      "title": "History of Non-Compliance with Medication or Treatment",
+      "shortLabel": "Non-compliance history",
+      "impact": "challenging",
+      "description": "If records show that you have previously stopped medication, refused treatment, or disengaged from services — leading to relapse — the Tribunal and clinical team will treat this as a significant risk factor. However, non-compliance has context that can be explained.",
+      "strategies": [
+        {
+          "action": "Explain WHY non-compliance occurred",
+          "detail": "Stopping medication because of intolerable side effects (weight gain, sedation, sexual dysfunction, tardive dyskinesia) is very different from stopping because you did not believe you were ill. Document the specific side effects and request a medication review or alternatives."
+        },
+        {
+          "action": "Request a medication review or alternatives",
+          "detail": "Ask the RC for a formal medication review. Different medications, depot (long-acting injection), or lower doses may address the side effect problems. Engaging with this process demonstrates willingness."
+        },
+        {
+          "action": "Offer a CTO as a middle ground",
+          "detail": "A CTO with a medication condition may be offered or can be requested. This can be presented to the Tribunal as an alternative to continued inpatient detention — demonstrating that you are willing to take medication in the community."
+        },
+        {
+          "action": "Show current engagement",
+          "detail": "Attendance at ward rounds, engagement with OT, participation in therapeutic groups — all of this is documented. Current engagement patterns can offset historical non-compliance."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge",
+        "cto-stepdown"
+      ],
+      "watchOut": "Saying 'I will take medication' without specific evidence of current compliance is not convincing. The Tribunal looks at behaviour, not promises."
+    },
+    {
+      "id": "substance-misuse",
+      "title": "Substance Misuse or Dual Diagnosis",
+      "shortLabel": "Substance misuse",
+      "impact": "challenging",
+      "description": "A history of drug or alcohol misuse — especially if linked to previous relapses or the current admission — significantly affects Tribunal hearings and clinical discharge decisions. Dual diagnosis (mental illness and substance misuse) requires evidence of concurrent management.",
+      "strategies": [
+        {
+          "action": "Request a formal referral to dual diagnosis services",
+          "detail": "Ask your RC or social worker to refer you to the trust's dual diagnosis or substance misuse team. Engagement with this team creates documented evidence that you are taking the issue seriously."
+        },
+        {
+          "action": "Obtain evidence of community support engagement",
+          "detail": "AA, NA, SMART Recovery, or local drug and alcohol service attendance letters are powerful evidence. Even a few attended sessions with a letter on headed paper makes a significant difference at Tribunal."
+        },
+        {
+          "action": "Agree to drug testing as part of CTO conditions if helpful",
+          "detail": "Proactively offering urine drug testing as a CTO condition can reassure the Tribunal and RC. It demonstrates confidence in your own abstinence and willingness to be accountable."
+        },
+        {
+          "action": "Establish a relapse prevention plan for substance use",
+          "detail": "A written plan identifying triggers, named support contacts, and what to do if temptation arises — separate from but linked to the mental health relapse prevention plan — shows the Tribunal that you have a realistic strategy."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge",
+        "cto-stepdown"
+      ],
+      "watchOut": "Minimising substance use history ('it wasn't that much' / 'I can handle it now') is consistently ineffective. Acknowledging the issue and showing what you have done about it is far more credible."
+    },
+    {
+      "id": "criminal-history",
+      "title": "Criminal History (No Restriction Order)",
+      "shortLabel": "Criminal history",
+      "impact": "challenging",
+      "description": "Previous criminal convictions can colour clinical team risk perceptions and appear in Tribunal reports — even if they are old, spent, or entirely unrelated to mental health. However, the Tribunal must apply the MHA test, not make moral character judgments.",
+      "strategies": [
+        {
+          "action": "Ensure your solicitor separates criminal history from MHA criteria",
+          "detail": "The Tribunal's job is to determine whether the MHA criteria are currently met — not to evaluate your character. Your solicitor should explicitly address this in submissions if the RC report conflates past offending with current mental health risk."
+        },
+        {
+          "action": "Highlight rehabilitation evidence",
+          "detail": "Completion of community payback, probation compliance, offending behaviour programmes, or simply many years without offending all demonstrate that past behaviour is not a reliable predictor of future risk."
+        },
+        {
+          "action": "Distinguish the offending context from your current situation",
+          "detail": "Was the offending during a period of untreated mental illness? During addiction? At a very different life stage? Contextualising past behaviour is legitimate and important."
+        },
+        {
+          "action": "Request spent convictions are not cited",
+          "detail": "Under the Rehabilitation of Offenders Act, spent convictions should not be given undue weight. Ask your solicitor to challenge excessive reliance on old or spent convictions in RC reports."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge"
+      ],
+      "watchOut": "Criminal history and mental health status are legally distinct. Do not allow clinical reports to conflate the two without challenge."
+    },
+    {
+      "id": "restricted-patient",
+      "title": "Restricted Patient (Hospital Order + Restriction Order, s.37/41)",
+      "shortLabel": "Restriction order (s.37/41)",
+      "impact": "very-challenging",
+      "description": "If you were sentenced by a Crown Court and given a hospital order with a restriction order (s.41), your discharge is governed by completely different rules. The Ministry of Justice (Secretary of State) must be involved in any discharge decision, and the usual patient-initiated routes are more limited.",
+      "strategies": [
+        {
+          "action": "Apply to the Tribunal annually",
+          "detail": "Restricted patients can apply to the Tribunal once a year (not just once per detention period). The Tribunal can grant conditional discharge for restricted patients — which is realistically the first step for most. Apply every year without fail."
+        },
+        {
+          "action": "Build a progressive rehabilitation record",
+          "detail": "The Ministry of Justice looks at your progression through the hospital system. Movement from high to medium to low security, increasing levels of leave (s.17), and a consistent record of compliance all build the MoJ's confidence to support discharge."
+        },
+        {
+          "action": "Engage with the forensic team and probation",
+          "detail": "Your forensic team will have a named MoJ case manager. Maintaining a positive working relationship with this team is essential — their reports go directly to the Secretary of State. Probation will also be involved in any conditional discharge plan."
+        },
+        {
+          "action": "Work toward conditional discharge as the realistic first step",
+          "detail": "Absolute discharge for restricted patients is rare. Conditional discharge with supervision, residence requirements, and treatment conditions is the realistic first goal. Show the Tribunal you have a robust community plan."
+        },
+        {
+          "action": "Use a specialist forensic mental health law solicitor",
+          "detail": "Restricted patient law is highly specialised. A solicitor with specific expertise in restricted patients and MoJ proceedings is essential — this is not general mental health law."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "judicial-review"
+      ],
+      "watchOut": "The usual nearest-relative discharge and Hospital Managers' discharge routes do not apply to restricted patients — the restriction order suspends these powers."
+    },
+    {
+      "id": "lack-of-insight",
+      "title": "Lack of Insight (Not Accepting the Diagnosis)",
+      "shortLabel": "Lack of insight",
+      "impact": "very-challenging",
+      "description": "Lack of insight is the most frequently cited reason for refusing discharge at Tribunal and for RC opposition. It is not a formal criterion for detention, but it is treated as evidence that the illness is ongoing and that the patient would not take medication or seek help in the community.",
+      "strategies": [
+        {
+          "action": "Distinguish between accepting diagnosis and accepting illness",
+          "detail": "You do not have to agree with the specific diagnosis to demonstrate insight. Insight means: acknowledging that your mental health has caused problems; recognising warning signs; being willing to seek help. You can say 'I disagree with the diagnosis but I accept that I have been very unwell and that I need support' — this is infinitely better than flat denial."
+        },
+        {
+          "action": "Focus on behaviour, not belief",
+          "detail": "The Tribunal responds better to 'I will attend outpatient appointments, take prescribed medication, and contact the crisis team if I feel unwell' than to any argument about the diagnosis. Demonstrating willingness to comply is more persuasive than agreeing with the label."
+        },
+        {
+          "action": "Use your IMHA to help articulate your perspective",
+          "detail": "An IMHA can help you express your views in a way that is constructive rather than confrontational. They can attend ward rounds with you to advocate for your perspective and help you phrase your position effectively."
+        },
+        {
+          "action": "Prepare a written personal statement for the Tribunal",
+          "detail": "A written statement acknowledging what happened, expressing concern for your own wellbeing, and setting out your community plan is often more persuasive than anything said verbally in the hearing. Your solicitor will help draft this."
+        },
+        {
+          "action": "Challenge 'insight' as a criterion if it is being used unfairly",
+          "detail": "Insight is not one of the three legal criteria in s.72 — the Tribunal must discharge if the criteria are not met, regardless of insight. If the Tribunal or RC is treating lack of insight as a standalone reason for detention, your solicitor can challenge this legally."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge"
+      ],
+      "watchOut": "Engaging in extended arguments about your diagnosis during Tribunal hearings almost always backfires. The panel interprets this as lack of insight, not as evidence of capacity. Save diagnostic disagreements for clinical settings and focus Tribunal time on your community plan."
+    },
+    {
+      "id": "no-housing-support",
+      "title": "No Stable Housing or Community Support",
+      "shortLabel": "No housing/support",
+      "impact": "challenging",
+      "description": "Lack of housing or community support is NOT a legal ground for detention under the MHA. However, in practice, Tribunals regularly defer discharge until these are arranged — treating a social care failure as a clinical necessity. This is legally challengeable.",
+      "strategies": [
+        {
+          "action": "Raise the s.117 duty proactively and in writing",
+          "detail": "The NHS and local authority have a statutory duty under s.117 to arrange aftercare BEFORE discharge from s.3. If housing or support has not been arranged, this is a breach of s.117 — not a reason to keep you detained. Write to the Trust and local authority stating that their s.117 duty is unfulfilled."
+        },
+        {
+          "action": "Request an urgent CPA/aftercare meeting",
+          "detail": "Ask your social worker to convene an urgent Care Programme Approach (CPA) meeting focused on discharge planning. Minutes of this meeting, which should include housing referrals and care package details, can be presented at the Tribunal as evidence of active planning."
+        },
+        {
+          "action": "Challenge deferred discharge at the Tribunal",
+          "detail": "If the Tribunal is considering deferring discharge until housing is arranged, ask your solicitor to argue that lack of housing is a local authority failure — not a clinical reason for continued detention. The Tribunal can order discharge and the local authority must then act."
+        },
+        {
+          "action": "Make housing referrals directly",
+          "detail": "As a detained patient you have priority need under the Housing Act 1996. Write to the local authority housing department directly (or ask your social worker or IMHA). A local authority housing assessment letter presented to the Tribunal demonstrates active progress."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge"
+      ],
+      "watchOut": "s.117 aftercare is FREE — the local authority cannot charge for it. If anyone suggests that services will only be available if you pay, this is unlawful. IMHA can help you challenge this."
+    },
+    {
+      "id": "absent-nearest-relative",
+      "title": "Absent, Estranged, or Unhelpful Nearest Relative",
+      "shortLabel": "Absent/unhelpful NR",
+      "impact": "neutral",
+      "description": "The Nearest Relative discharge route (s.23 NR notice) requires a willing and capable NR. If yours is estranged, deceased, abroad, unwilling, or actively hostile to your interests, this route is blocked — but other routes remain fully open.",
+      "strategies": [
+        {
+          "action": "Check the full s.26 hierarchy",
+          "detail": "The hierarchy is long: spouse/partner, child, parent, sibling, grandparent, grandchild, uncle/aunt, nephew/niece, other relative. If the first person is unavailable, the next in line takes the role. Work through the full list before concluding you have no accessible NR."
+        },
+        {
+          "action": "Apply to displace an unhelpful NR under s.29",
+          "detail": "If your NR is acting against your interests — for example, supporting your detention when you believe it is unjustified — the AMHP or a relative can apply to the County Court to displace them. The court appoints a more appropriate person. This takes time but is available."
+        },
+        {
+          "action": "Use Tribunal and Managers' routes instead",
+          "detail": "The Tribunal and Hospital Managers' hearing do not require NR involvement. These routes are fully open regardless of your NR situation and are generally more powerful anyway."
+        },
+        {
+          "action": "Nominate a trusted person to be kept informed",
+          "detail": "Even if the NR discharge route is unavailable, you can ask for a named person (friend, advocate) to be kept informed of your treatment. This is not a legal NR role but gives you a trusted ally in the process."
+        }
+      ],
+      "affectsRoutes": [
+        "nearest-relative"
+      ],
+      "watchOut": "If your NR is in a position to object to a s.3 admission (and they reasonably do), the AMHP cannot proceed without applying to court to displace them. This is actually a protection as much as it can be an obstacle."
+    },
+    {
+      "id": "first-admission",
+      "title": "First Admission — No Prior History",
+      "shortLabel": "First admission",
+      "impact": "helpful",
+      "description": "A first-time detention, with no prior history of psychiatric admission, is actually advantageous at Tribunal and in clinical discharge discussions. There is no 'revolving door' pattern, and the episode can be contextualised as a response to specific acute circumstances that have since changed.",
+      "strategies": [
+        {
+          "action": "Contextualise the admission explicitly",
+          "detail": "Was there a specific trigger — bereavement, relationship breakdown, sleep deprivation, drug use, extreme stress? If so, document what that trigger was, that it has now resolved, and what protective factors exist against recurrence."
+        },
+        {
+          "action": "Emphasise the absence of a pattern",
+          "detail": "The Tribunal is weighing risk based partly on past behaviour. The absence of past admissions is evidence in your favour — explicitly make this argument. 'This is my first admission; there is no pattern of revolving-door admission' is a valid and important point."
+        },
+        {
+          "action": "Use IMHA even if it seems unnecessary",
+          "detail": "First-time patients often underestimate the complexity of the process. Patients who engage with an IMHA and solicitor at their first Tribunal have significantly better outcomes. Do not assume a clear case will resolve itself."
+        },
+        {
+          "action": "Set up robust community support proactively",
+          "detail": "For a first admission with no existing community team, you may need to proactively arrange GP follow-up, private or NHS counselling, and any support that demonstrates you will not be isolated after discharge."
+        }
+      ],
+      "affectsRoutes": [
+        "tribunal",
+        "clinical-discharge"
+      ],
+      "watchOut": "Even first-time patients can be kept on s.2 or s.3 if the acute episode is severe. Being a first admission does not automatically mean the Tribunal discharges. The legal criteria still apply."
+    }
+  ],
+  "dischargeConfig": {
+    "rankColors": {
+      "1": "primary",
+      "2": "secondary",
+      "3": "info",
+      "4": "success",
+      "5": "warning",
+      "6": "error"
+    },
+    "impactColors": {
+      "helpful": "success",
+      "neutral": "info",
+      "challenging": "warning",
+      "very-challenging": "error"
+    },
+    "routeLayout": [
+      {
+        "key": "steps",
+        "label": "Step-by-step",
+        "type": "numbered"
+      },
+      {
+        "key": "outcomes",
+        "label": "What they can order",
+        "type": "icon-list",
+        "iconName": "PlayArrow",
+        "iconColor": "accent"
+      },
+      {
+        "key": "strengths",
+        "label": "Strengths",
+        "type": "icon-list",
+        "iconName": "CheckCircle",
+        "iconColor": "success"
+      },
+      {
+        "key": "limitations",
+        "label": "Limitations",
+        "type": "icon-list",
+        "iconName": "Cancel",
+        "iconColor": "error"
+      },
+      {
+        "key": "tip",
+        "label": "Key tip",
+        "type": "alert",
+        "iconName": "Lightbulb",
+        "severity": "info"
+      }
+    ],
+    "circumstanceLayout": [
+      {
+        "key": "description",
+        "label": null,
+        "type": "text"
+      },
+      {
+        "key": "strategies",
+        "label": "Strategies",
+        "type": "strategies"
+      },
+      {
+        "key": "watchOut",
+        "label": "Watch out",
+        "type": "alert",
+        "iconName": "Warning",
+        "severity": "warning"
+      }
+    ],
+    "ui": {
+      "heading": "Getting Out — Discharge Pathways",
+      "subheading": "Six routes to discharge, ranked by power. Pursue multiple routes simultaneously. Use the Circumstances tab for strategies tailored to your records.",
+      "urgentTitle": "Act on day one",
+      "urgentBody": "On s.2 you have only 14 days to apply to the Tribunal — this cannot be extended. Contact a mental health law solicitor immediately. Legal aid is free, no means test.",
+      "routesIntro": "Ranked by legal power. Pursue routes #1, #2, and #3 simultaneously.",
+      "circumstancesIntro": "Select every circumstance that applies — the more you select, the more specific the guidance.",
+      "selectorTitle": "Which of these apply to you?",
+      "emptyTitle": "Select one or more circumstances above",
+      "emptySubtitle": "You will see strategies and watch-outs tailored to your situation.",
+      "affectedTitle": "Routes most affected by your circumstances",
+      "affectedHint": "Click a route chip to jump to its detail.",
+      "strategiesTitle": "Tailored strategies for your situation",
+      "mostAffectsLabel": "Most affects:",
+      "legalBasisPrefix": "Legal basis:",
+      "footerDisclaimer": "Reference guide only — not legal advice. Always consult a qualified mental health law solicitor. Legal aid is available for Tribunal proceedings."
+    }
+  },
+  "mhaSectionsConfig": {
+    "categories": [
+      {
+        "id": "detention",
+        "label": "Detention Power",
+        "color": "error"
+      },
+      {
+        "id": "discharge",
+        "label": "Discharge Route",
+        "color": "success"
+      },
+      {
+        "id": "rights",
+        "label": "Right / Safeguard",
+        "color": "primary"
+      },
+      {
+        "id": "community",
+        "label": "Community Power",
+        "color": "secondary"
+      },
+      {
+        "id": "oversight",
+        "label": "Oversight",
+        "color": "warning"
+      },
+      {
+        "id": "police",
+        "label": "Police Power",
+        "color": "default"
+      }
+    ]
+  },
+  "rightsConfig": {
+    "priorityColors": {
+      "essential": "error",
+      "important": "warning",
+      "useful": "default"
+    }
+  },
+  "documentBrowserConfig": {
+    "categoryColors": {
+      "Mental Health Act (MHA) Statutory Forms": "secondary",
+      "Admission & Assessment Documents": "primary",
+      "Risk Assessment & Management": "error",
+      "Care Planning": "success",
+      "Medical & Prescribing Documents": "warning",
+      "Nursing Documentation": "info",
+      "Incident & Safeguarding": "error",
+      "Capacity & Consent": "warning",
+      "Allied Health Professional Documents": "primary",
+      "Administrative & Governance": "default"
+    }
+  }
+}

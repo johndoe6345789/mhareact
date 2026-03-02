@@ -7,7 +7,7 @@ import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import Chip from '@mui/material/Chip';
 import Paper from '@mui/material/Paper';
-import Divider from '@mui/material/Divider';
+import Hr from './Hr';
 import SearchIcon from '@mui/icons-material/Search';
 
 import { documentCategories, layouts, componentLayouts, documentBrowserConfig } from '../data/index';
@@ -103,7 +103,7 @@ export default function DocumentBrowser() {
                         <HighlightText text={doc.description} query={search} />
                       </Typography>
                     </Box>
-                    {idx < cat.documents.length - 1 && <Divider />}
+                    {idx < cat.documents.length - 1 && <Hr />}
                   </Box>
                 ))}
               </Paper>

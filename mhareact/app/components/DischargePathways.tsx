@@ -12,7 +12,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Divider from '@mui/material/Divider';
+import Hr from './Hr';
 import Button from '@mui/material/Button';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -233,7 +233,7 @@ export default function DischargePathways() {
               )}
               <Typography variant="subtitle2" fontWeight={700} sx={{ mb: 2 }}>{ui.strategiesTitle}</Typography>
               {d.activeCircumstances.map((c, i) => (
-                <Box key={c.id}>{i > 0 && <Divider sx={{ my: 2 }} />}<CircumstanceCard c={c} /></Box>
+                <Box key={c.id}>{i > 0 && <Hr />}<CircumstanceCard c={c} /></Box>
               ))}
             </>
           )}
